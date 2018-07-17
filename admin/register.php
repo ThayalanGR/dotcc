@@ -35,7 +35,7 @@ if (isset($_POST["sub"])) {
           $message = "     
           Hello ADMIN $name,
           <br /><br />
-          Welcome to TechnKryon!<br/>
+          Welcome to DotCodeCommunity!<br/>
           To complete your registration  please , just click following link<br/>
           <br /><br />
           <a href=".SITE_URL."activate1.php?id=$id&code=$activationcode>Click HERE to Activate :)</a>
@@ -50,11 +50,11 @@ if (isset($_POST["sub"])) {
           $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
           $mail->Host = gethostbyname('ssl://smtp.gmail.com');      // sets GMAIL as the SMTP server
           $mail->Port = 465;                   // set the SMTP port for the GMAIL server
-          $mail->Username = 'grthayalan18@gmail.com';
-          $mail->Password = '1018@thayalan';
-          $mail->SetFrom('grthayalan18@gmail.com', 'Thaya');
+          $mail->Username = 'dotcodecommunity@gmail.com';
+          $mail->Password = 'dotcc@123';
+          $mail->SetFrom('dotcodecommunity@gmail.com', 'dotCC');
           $mail->AddAddress($email);
-          $mail->Subject = trim("Email Verifcation - TechnoKryon");
+          $mail->Subject = trim("Registration - DotCodeCommunity");
           $mail->MsgHTML($message);
           try {
             $mail->send();

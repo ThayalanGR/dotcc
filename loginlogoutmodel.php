@@ -42,10 +42,10 @@
                                 <label class="control-label" style="font-size:12px;" for="fname">Batch-no </label>
                                 <input class="form-control input-sm" style="font-size:12px;" type="text" name="fname" id="fname">
                             </div>
-                            <div class="form-group has-warning">
+                            <!-- <div class="form-group has-warning">
                                 <label class="control-label" style="font-size:12px;" for="password-input">Last-name </label>
                                 <input class="form-control input-sm" style="font-size:12px;" type="text" name="lname" id="lname" >
-                            </div>
+                            </div> -->
                             <div class="form-group has-warning">
                                 <label class="control-label" style="font-size:12px;" for="password-input">Gender:- </label>
                                 <div class="radio">
@@ -77,6 +77,21 @@
                                 <option class="input-sm" style="font-size:12px;" value="<?php echo ($i < 10) ? '0'.$i : $i; ?>"><?php echo $i; ?></option>
                                 <?php endfor; ?>
                                 </select>
+                            </div>
+                            <div class="form-group has-warning">
+                                <label class="control-label" style="font-size:12px;" for="password-input">Interested in:- </label>
+                                <div class="radio">
+                                    <label class="control-label" style="font-size:12px;">
+                                        <input type="radio"  id="gender1" value="AndroidDevelopment" name="interest">Android Development</label>
+                                </div>
+                                <div class="radio">
+                                    <label class="control-label" style="font-size:12px;">
+                                        <input type="radio"  id="gender2" value="WebDevelopment" name="interest" >Web Development</label>
+                                </div>
+                            </div>
+                            <div class="form-group has-error has-feedback">
+                                <label style="font-size:12px;" class="control-label" for="exception ">Any other skills ? </label>
+                                <input style="font-size:12px;" class="form-control input-sm"  name="exception" id="exception">
                             </div>
                             <div class="form-group has-error has-feedback">
                                 <label style="font-size:12px;" class="control-label" for="email">Email :-</label>

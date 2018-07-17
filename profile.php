@@ -26,7 +26,7 @@ include('./userprofile.php');
 ?>
 </div>
 <?php 
-    include('./rightpan.php');      
+    // include('./rightpan.php');      
     include('./footer.php');
     ?>
 </body>
