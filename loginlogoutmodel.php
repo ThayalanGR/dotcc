@@ -1,7 +1,7 @@
 <div class="modal fade shadow" role="dialog" tabindex="-1" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" style="display: block;">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 <div>
                 <ul class="nav nav-tabs">
