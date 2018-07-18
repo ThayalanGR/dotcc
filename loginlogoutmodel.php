@@ -1,4 +1,4 @@
-<div class="modal fade" role="dialog" tabindex="-1" id="myModal">
+<div class="modal fade shadow" role="dialog" tabindex="-1" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -13,7 +13,7 @@
                     <div class="tab-pane active" role="tabpanel" id="tab-1">
                         <div class="login-card"><img src="assets/img/avatar_2x.png" class="profile-img-card">
                             <form class="form-signin" action="" method="post" name="log" onsubmit="return validateForm1();" >
-                                <input class="form-control" style="font-size:12px;" type="email" required="" placeholder="Email address" autofocus="" id="email" name="email">
+                                <input class="form-control" style="font-size:12px;" type="email" required="" placeholder="Email address" autofocus="" id="email1" name="email">
                                 <input class="form-control" type="password" style="font-size:12px;" required="" placeholder="Password" id="password" name="password">
                                 <div class="checkbox">
                                     <div class="checkbox">
@@ -82,11 +82,11 @@
                                 <label class="control-label" style="font-size:12px;" for="password-input">Interested in:- </label>
                                 <div class="radio">
                                     <label class="control-label" style="font-size:12px;">
-                                        <input type="radio"  id="gender1" value="AndroidDevelopment" name="interest">Android Development</label>
+                                        <input type="radio"  id="interest1" value="AndroidDevelopment" name="interest">Android Development</label>
                                 </div>
                                 <div class="radio">
                                     <label class="control-label" style="font-size:12px;">
-                                        <input type="radio"  id="gender2" value="WebDevelopment" name="interest" >Web Development</label>
+                                        <input type="radio"  id="interest2" value="WebDevelopment" name="interest" >Web Development</label>
                                 </div>
                             </div>
                             <div class="form-group has-error has-feedback">
@@ -95,7 +95,7 @@
                             </div>
                             <div class="form-group has-error has-feedback">
                                 <label style="font-size:12px;" class="control-label" for="email">Email :-</label>
-                                <input style="font-size:12px;" class="form-control input-sm" type="email" name="email" id="email"></div>
+                                <input style="font-size:12px;" class="form-control input-sm" type="email" name="email" id="email2"></div>
                             <div class="form-group has-error has-feedback">
                                 <label style="font-size:12px;" class="control-label" for="pass1">Password:- </label>
                                 <input style="font-size:12px;" class="form-control input-sm" type="password" id="pass1"  name="pass1"></div>

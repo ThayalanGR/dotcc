@@ -1,58 +1,32 @@
 
-   </div>
-          <footer class="container-fluid text-center">
-          <div class="col-md-12 col-sm-4 footer-navigation" >
-                    <h3 style="color:#244272;"><strong>Comments</strong></h3>
-                    <?php if ($msg <> "") { ?>
-                                <div class="alert alert-dismissable alert-<?php echo $msgType; ?>">
-                                    <button data-dismiss="alert" class="close" type="button">x</button>
-                                    <p><?php echo $msg; ?></p>
-                                </div>
-                    <?php } ?>
-                    <?php 
-                                if(strlen($_SESSION['userlogin'])>0){?>
-                                   <form class="form-signin" action="" method="post" name="comment" enctype="multipart/form-data">
-                    <input type="text" id="name" required="" name="subject" placeholder="Enter Subject..">
-                    <textarea id="subject" name="content" required="" placeholder="Write something.." style="height:150px"></textarea><br>
-                    <label for="attachment">Attachment:-</label>
-                    <input type="file" id="attachment" class="btn-primary" name="attachment" style="margin-left:0px; display:inline-block;"><br>
-                    
-                    <input type="submit" value="comment" name="comment">
-                </form><br>
-               <?php } else{ ?>
-
-                <h4>Sorry You must Be Logged in to comment :-)</h4>
-
-            <?php } ?>
+</div>
+<footer class="container-fluid text-center" style="margin-bottom:0px;"> 
+    <div class="row">
+        <div class="col-md-4 col-sm-6 footer-navigation" style="display:grid;">
+            <h3><a href="#"><span><img src="assets/img/dccLogo.svg" alt="Dot" style="width:40px; margin-top:-15px; margin-right:5px;">CodeCommunity </span></a></h3>
+            <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+            <p class="company-name">dotcodecommunity© 2018</p>
+        </div>
+        <div class="col-md-4 col-sm-6 footer-contacts">
+            <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                <p style="font-weight:normal; font-size:12px;"><span class="new-line-span">Saranathan College of Engineering</span> Computer Science Department</p>
             </div>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6 footer-navigation" style="display:grid;">
-                                
-                                <h3><a href="#"><span><img src="assets/img/dccLogo.svg" alt="Dot" style="width:40px; margin-top:-15px; margin-right:5px;">CodeCommunity </span></a></h3>
-                                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
-                                <p class="company-name">dotcodecommunity© 2018</p>
-                            </div>
-                            <div class="col-md-4 col-sm-6 footer-contacts">
-                                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                                    <p style="font-weight:normal; font-size:12px;"><span class="new-line-span">Saranathan College of Engineering</span> Computer Science Department</p>
-                                </div>
-                                <div><i class="fa fa-phone footer-contacts-icon"></i>
-                                    <p class="footer-center-info email text-left"></p>
-                                </div>
-                                <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                                    <p> <a href="#" target="_blank">dotcodecommunity@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="clearfix visible-sm-block"></div>
-                            <div class="col-md-4 footer-about">
-                                <h4>About </h4>
-                                <p style="font-size:20px;"><img src="assets/img/dccLogo.svg" alt="Dot" style="width:25px; margin-top:-5px; margin-right:5px; ">CodeCommunity </p>
-                                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
-                            </div>
-                        </div>
-                    </footer>
-            
-           
+            <div><i class="fa fa-phone footer-contacts-icon"></i>
+                <p class="footer-center-info email text-left"></p>
+            </div>
+            <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                <p> <a href="#" target="_blank">dotcodecommunity@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-4 footer-about">
+            <h4>About </h4>
+            <p style="font-size:20px;"><img src="assets/img/dccLogo.svg" alt="Dot" style="width:25px; margin-top:-5px; margin-right:5px; ">CodeCommunity </p>
+            <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+        </div>
+    </div>
+</footer>
+                     
 <!--all java scripts are downgraded here -->
 <script>
 $(document).ready(function(){
@@ -210,3 +184,4 @@ $(function() {
 </script>
  <script src="assets/js/jquery.nicescroll.js"></script>
  <script src="assets/js/jquery.scrollTo.min.js" type="text/javascript"></script>
+

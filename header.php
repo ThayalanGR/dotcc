@@ -135,7 +135,7 @@ $font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 
 /* Body/Header stuff */
 body {
-  padding: 0px 30px 30px 20px;
+  padding: 0;
   font-family: $font-default;
   font-weight: 100;
 }
@@ -398,24 +398,26 @@ background-color: #555;
 </style>
 </head>
 <div id="header"><link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-<body class="col-sm-13">
+<body style="background-color:#f3f3f3;">
     <div >
         <nav class="navbar navbar-inverse custom-header">
         <img src="assets/img/dccLogo.svg" id="mainLogo" style=""alt="Dot">
             <div class="container-fluid">
             
-                <div class="navbar-header" style="margin-left:20px;"><a class="navbar-brand navbar-link" href="index.php"><strong>CodeCommunity</strong></a>
+                <div class="navbar-header" style="margin-left:20px;"><a class="navbar-brand navbar-link" href="home.php"><strong>CodeCommunity</strong></a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" style="width:25px;" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                         <ul class="nav navbar-nav links">
-                                <li role="presentation"><a href="index.php">Home </a></li>
+                                <li role="presentation"><a href="home.php">Home </a></li>
                                 <li role="presentation"><a href="gamecategories.php">Project categories</a></li>
                                 <li role="presentation"><a href="news&events.php">News and Events</a></li>
+                                <li role="presentation"><a href="projectidea.php">suggest-projects</a></li>                      
                                 <?php 
                                 if(strlen($_SESSION['userlogin'])>0){?>
                                 <li role="presentation"><a href="./shoppiggifts.php" class="custom-navbar"> My Projects <span class="badge">new</span></a></li>
                                 <?php } ?>
+                                <li role="presentation"><a href="about.php">About dCC</a></li>
                         </ul>    
                             <?php maindiv();?>
                 </div>
@@ -423,5 +425,5 @@ background-color: #555;
         </nav>
     </div>
 </div>
-    <button onclick="topFunction()" id="myBtn12" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn12" style="background-color: transparent; color: lightblue;" title="Go to top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></button>
     <div id="wrapper">
