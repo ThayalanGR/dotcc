@@ -62,15 +62,7 @@ $_SESSION['msg']="Old Password not match !!";
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" >
-<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-theme.min.css">
+
 <style>
 input[type=text]{
     width:200px;
@@ -201,19 +193,13 @@ return true;
 });
 </script>
 
-
-
-
-</head>
-<body>
-
 <p style="color:#F00"><?php echo $_SESSION['msg'];?><?php echo $_SESSION['msg']="";?></p>
     <div style="text-align:center;">                      
         <a href="#panel-1" class="btn btn-primary">Update Profile</a>
         <a href="#panel-2" class="btn btn-primary">Change Password</a>
-        <a href="#panel-3" class="btn btn-primary">Played Games</a>
-        <a href="#panel-4" class="btn btn-primary">Point Details</a>
-        <a href="#panel-5" class="btn btn-primary">Shopping gift details</a>
+        <a href="#panel-3" class="btn btn-primary">My Activity</a>
+        <a href="#panel-4" class="btn btn-primary">Credits</a>
+        <a href="#panel-5" class="btn btn-primary">Reputation</a>
 </div>
 
 
@@ -235,7 +221,7 @@ return true;
 <img alt="User Pic" src="./upload/img/<?php echo $row['upload_image']; ?>" class="img-circle img-responsive">
 <h5>upload new profile image:<h5>
 <input type="file" name="image"> 
-<input type="submit" style="margin-left:5px; margin-top:5px;" name="uploadimage" value="Upload";>
+<input type="submit" style="margin-left:5px; margin-top:5px;" class="btn btn-primary" name="uploadimage" value="Upload";>
 </form>
 </div>
 <div class=" col-md-9 col-lg-9 "> 
@@ -244,35 +230,35 @@ return true;
 <form  name="form1" method="post" action="">
 <tr>
 <td>Name:</td>
-<td><input type="text" name="name" value="<?php echo $row['name']; ?>"></td>
+<td><input type="text" style="height:20px;" name="name" value="<?php echo $row['name']; ?>"></td>
 </tr>
 <tr>
 <td>First Name:</td>
-<td><input type="text" name="fname" value="<?php echo $row['first_name']; ?>"></td>
+<td><input type="text" name="fname" style="height:20px;" value="<?php echo $row['first_name']; ?>"></td>
 </tr>
 
 <tr>
 <td>Last Name:</td>
-<td><input type="text" name="lname" value="<?php echo $row['last_name']; ?>"></td>
+<td><input type="text" name="lname" style="height:20px;" value="<?php echo $row['last_name']; ?>"></td>
 </tr>
 
 <tr>
 <td>Email:</td>
-<td><input type="text" name="email" value="<?php echo $row['email'];?>" readonly ></td>
+<td><input type="text" name="email" style="height:20px;" value="<?php echo $row['email'];?>" readonly ></td>
 </tr>
 
 <tr>
 <td>Date of Birth</td>
-<td><input type="text"  name="dob" value="<?php echo $row['birthdate'];?>" readonly ></td>                         
+<td><input type="text"  name="dob" style="height:20px;" value="<?php echo $row['birthdate'];?>" readonly ></td>                         
 </tr>
 
 <tr>
 <td>Gender</td>
-<td><input type="text"  name="gender" value="<?php echo $row['gender'];?>" readonly ></td>
+<td><input type="text"  name="gender" style="height:20px;" value="<?php echo $row['gender'];?>" readonly ></td>
 </tr>
 
 <tr>
-<td><input type="submit" name="profile" value="Update" ></div></td>
+<td><input type="submit" name="profile" class="btn btn-primary" value="Update" ></div></td>
 </tr>
 
 </form>
@@ -321,25 +307,21 @@ return true;
 
 <!--PLAYED GAMES-->
 <div class="panel panel-info" id="panel-3">
-<div class="panel-heading"><h3 class="panel-title">PLAYED GAMES</h3></div>
-<div class="panel-body"><h1>played game details</h1></div>
+<div class="panel-heading"><h3 class="panel-title">MY ACTIVITY</h3></div>
+<div class="panel-body"><h1>Progress History </h1></div>
 </div>
 
 
 <!--details point details-->
 <div class="panel panel-info" id="panel-4">
 <div class="panel-heading">
-<h3 class="panel-title">POINT DETAILS</h3></div>
-<div class="panel-body"><h1>details Point details</h1></div>
+<h3 class="panel-title">CREDITS</h3></div>
+<div class="panel-body"><h1>Credits Point Details</h1></div>
 </div>
 
 <!--SHOPPING GIFT DETAILS-->
 <div class="panel panel-info" id="panel-5">
 <div class="panel-heading">
-<h3 class="panel-title">SHOPPING GIFT DETAILS</h3></div>
-<div class="panel-body"><h1>shopping gift details</h1></div>
+<h3 class="panel-title">Reputation</h3></div>
+<div class="panel-body"><h1>Reputation Details</h1></div>
 </div>
-
-    
-</body>
-</html>

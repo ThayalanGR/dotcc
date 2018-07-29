@@ -1,7 +1,7 @@
 <?php
   session_start();
-  require_once('dbconnection.php');
-
+  include('dbconnection.php');
+  //checking login and redirecting to index page
   include('checklogin1.php');
   check_login1();
   //register code
@@ -18,19 +18,12 @@
   // include('forgetpasswordcode.php');
   //including leftpan
   // include('leftpan.php');
-  //code for comments
-  // include('comments.php');
-
 ?>
 <div id="wrapper">
 <!-- all main contents over here -->
 
 
 
+  </div>
 
-</div>
 <?php include('./footer.php'); ?>
-
-
-
-

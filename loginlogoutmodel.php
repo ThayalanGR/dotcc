@@ -5,7 +5,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 <div>
                 <ul class="nav nav-tabs">
-                    <li class="active"><a style="font-size:12px; padding:5px;"  class="bg-warning" href="#tab-1" role="tab" data-toggle="tab">Login </a></li>
+                    <li ><a class="text-primary" style="font-size:12px; padding:5px;" href="#tab-1" role="tab" data-toggle="tab">Login </a></li>
                     <li><a class="text-primary" style="font-size:12px; padding:5px;" href="#tab-2" role="tab" data-toggle="tab">Register </a></li>
                     <li><a class="text-primary" style="font-size:12px; padding:5px;"  href="#tab-3" role="tab" data-toggle="tab">Forgot password? </a></li>
                 </ul>
@@ -23,7 +23,11 @@
                                 </div>
                                 <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" name="login" id="login">Sign in</button>
                             </form>
-                            <a href="#tab-3" role="tab" data-toggle="tab" style="font-size:12px;" class="forgot-password">Forgot your password?</a></div>
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a href="#tab-3" role="tab" data-toggle="tab" style="font-size:12px;" class="forgot-password">Forgot your password?</a>
+                                </li>
+                        </div>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="tab-2">
                         <?php if ($msg <> "") { ?>
@@ -96,6 +100,9 @@
                             <div class="form-group has-error has-feedback">
                                 <label style="font-size:12px;" class="control-label" for="email">Email :-</label>
                                 <input style="font-size:12px;" class="form-control input-sm" type="email" name="email" id="email2"></div>
+                            <div class="form-group has-error has-feedback">
+                                <label style="font-size:12px;" class="control-label" for="mobile">Mobile     :-</label>
+                                <input style="font-size:12px;" class="form-control input-sm"  name="mobile" id="mobile"></div>
                             <div class="form-group has-error has-feedback">
                                 <label style="font-size:12px;" class="control-label" for="pass1">Password:- </label>
                                 <input style="font-size:12px;" class="form-control input-sm" type="password" id="pass1"  name="pass1"></div>

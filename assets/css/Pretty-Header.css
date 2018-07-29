@@ -1,5 +1,5 @@
 .custom-header{
-  background:#292c2f;
+  background:#039be5;
   padding: 2px 40px;
   box-sizing:border-box;
   border:0;
@@ -7,11 +7,11 @@
 }
 
 .custom-header a.navbar-brand.navbar-link{
-  color:#4569a0;
-  font:normal 35px Cookie, Arial, Helvetica, sans-serif;
+  color:#fff;
+  font: normal 30px trajan-pro-3, serif;
   line-height:0.5;
   margin-right:40px;
-  background:#282e33;
+  background:#039be5;
 }
 
 .custom-header a.navbar-brand.navbar-link span{
@@ -22,24 +22,27 @@
   max-width:35px; 
   margin-top:5px; 
   position:absolute;
-  margin-left:-25px;
+  margin-left:-30px;
+  background-color: white;
+  border-radius: 10px;
 
 }
 
 
 @media screen and (max-width:370px) {
-
+  
   #mainLogo{
-    width:25px;
+    width:20px;
+    margin-top: 8px;
 
   }
   .custom-header a.navbar-brand.navbar-link{
-    color:#4569a0;
-    font:normal 20px Cookie, Arial, Helvetica, sans-serif;
+    color: #fff;
+    font: normal 15px trajan-pro-3, serif;
     line-height:0.5;
     /* margin-right:40px; */
-    background:#282e33;
-    margin-left: -30px;
+    background: #039be5;
+    margin-left: -20px;
   }
   
 .custom-header ul.nav.navbar-nav.links li a{
@@ -47,7 +50,7 @@
   opacity:0.9;
   text-decoration:none;
   color:#eaeff4;
-  background:#292c2f;
+  background:#039be5;
   border:0;
 }
 }
@@ -57,7 +60,7 @@
   opacity:0.9;
   text-decoration:none;
   color:#eaeff4;
-  background:#292c2f;
+  background:#039be5;
   border:0;
 }
 
@@ -71,27 +74,27 @@
   border-radius:2px;
   font-size:11px;
   color:#fff;
-  background-color:#2A6A92;
+  background-color:#039be5;
   padding:2px 4px;
   font-weight:normal;
 }
 
 .custom-header li.dropdown, .custom-header li.dropdown.open{
-  background:#3a3c3e;
+  background:#039be5;
 }
 
 .custom-header li.dropdown .dropdown-toggle{
   border-radius:2px;
   color:#fff;
-  padding:8px 14px;
-  background:#3a3c3e;
+  padding:8px 0px;
+  background:#039be5;
   opacity:0.9;
   border:0;
   margin:0;
 }
 
 .custom-header li.dropdown .dropdown-toggle:focus, .custom-header li.dropdown .dropdown-toggle:hover, .custom-header li.dropdown .dropdown-toggle:active{
-  background:#3a3c3e;
+  background:#039be5;
   color:#fff;
 }
 
@@ -106,26 +109,26 @@ img.dropdown-image{
 }
 
 .custom-header .dropdown ul{
-  background-color:#3a3c3e;
+  background-color:#039be5;
   border:0;
   min-width:140px;
 }
 
 .custom-header .dropdown ul li{
-  background-color:#3a3c3e;
+  background-color:#039be5;
   padding:7px;
   text-align:center;
 }
 
 .custom-header .dropdown ul li a{
-  background:#3a3c3e;
+  background:#039be5;
   border-radius:2px;
   color:#fff;
   padding:0;
 }
 
 .custom-header .dropdown ul li a:active, .custom-header .dropdown ul li a:focus, .custom-header .dropdown ul li a:hover{
-  background:#3a3c3e;
+  background:#039be5;
 }
 
 .custom-header .dropdown ul li.active a{
