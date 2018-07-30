@@ -30,12 +30,6 @@
                         </div>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="tab-2">
-                        <?php if ($msg <> "") { ?>
-                            <div class="alert alert-dismissable alert-<?php echo $msgType; ?>">
-                                <button data-dismiss="alert" class="close" type="button">x</button>
-                                <p><?php echo $msg; ?></p>
-                            </div>
-                        <?php } ?>
                         <form id="form_container"  class="bootstrap-form-with-validation"  action="" method="post" name="f" onsubmit="return validateForm();"  enctype="multipart/form-data">
                             <div class="form-group has-success">
                                 <label class="control-label" style="font-size:12px;" for="uname">Name </label>

@@ -26,11 +26,13 @@ if (isset($_POST["sub"])) {
     $gender = $_POST["gender"];
     $password = trim($_POST["pass1"]);
     $email = trim($_POST["email"]);
+    $mobile = trim($_POST["mobile"]);
     $yearOfBirth = $_POST['yearOfBirth'];
     $monthOfBirth = $_POST['monthOfBirth'];
     $dateOfBirth = $_POST['dateOfBirth'];
     $interest = $_POST['interest'];
     $exception =  $_POST['exception'];
+
     // Validate
     if ($yearOfBirth != '' && $monthOfBirth != '' && $dateOfBirth != '') {
       // Generate date of birth in format of YYYY-mm-dd
@@ -49,7 +51,7 @@ if (isset($_POST["sub"])) {
         $msgType = "warning";
       } else {
         $activationcode=md5(uniqid(rand()));
-        $sql = "INSERT INTO `user` (`role_id`,`name`, `birthdate`,`gender`,`password`,`activationcode`,`forgetpasswordcode`,`batchno`,`upload_image`,`email`, `interest`, `exception`) VALUES " . "(:role_id ,:name,:dob,:gender,:password,:activationcode,:forgetpasswordcode,:bno,:upload_image,:email,:interest,:exception)";
+        $sql = "INSERT INTO `user` (`role_id`,`name`, `birthdate`,`gender`,`password`,`activationcode`,`forgetpasswordcode`,`batchno`,`upload_image`,`email`,`mobile`, `interest`, `exception`) VALUES " . "(:role_id ,:name,:dob,:gender,:password,:activationcode,:forgetpasswordcode,:bno,:upload_image,:email,:mobile,:interest,:exception)";
         $stmt = $DB->prepare($sql);
         $stmt->bindValue(":role_id", $roleid);
         $stmt->bindValue(":name", $name);
@@ -62,6 +64,7 @@ if (isset($_POST["sub"])) {
         $stmt->bindValue(":bno", $bno);
         $stmt->bindValue(":upload_image", $path);
         $stmt->bindValue(":email", $email);
+        $stmt->bindValue(":mobile", $mobile);
         $stmt->bindValue(":interest", $interest);
         $stmt->bindValue(":exception", $exception);
         $stmt->execute();

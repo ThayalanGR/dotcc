@@ -7,10 +7,14 @@ $msg="";
 if(isset($_POST['Submit']))
 {
     $name=$_POST['name'];
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
+	$batchno=$_POST['bno'];
+	$gender=$_POST['sex'];
+    $mobile=$_POST['mob'];
     $email=$_POST['email'];
-	mysqli_query($con,"update user set name='$name',first_name='$fname',last_name='$lname' , email='$email' where user_id='".$_GET['uid']."'");
+    $interest=$_POST['interest'];
+    // $dob=$_POST['dob'];
+    $active=$_POST['active'];
+	mysqli_query($con,"update user set name='$name',batchno='$batchno',gender='$gender' ,interest='$interest' ,mobile='$mobile' , email='$email',active=$active  where user_id='".$_GET['uid']."'");
     $_SESSION['msg']="Profile Updated successfully";
 }
 ?>
@@ -42,7 +46,7 @@ if(isset($_POST['Submit']))
 	  {?>
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> <?php echo $row['first_name'];?> 's Information</h3>
+          	<h3><i class="fa fa-angle-right"></i> <?php echo $row['name'];?> 's Information</h3>
 				<div class="row">
                   <div class="col-md-12">
                       <div class="content-panel">
@@ -52,39 +56,64 @@ if(isset($_POST['Submit']))
                            <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Profile Picture </label>
                               <div class="col-sm-2">
-                             <img alt="User Pic" src="../upload/img/<?php echo $row['upload_image']; ?>" class="img-circle img-responsive">                             </div>
+                             <img alt="User Pic" src="../upload/img/<?php echo $row['upload_image']; ?>" class="img-circle img-responsive">
+                             </div>
                           </div>
  
                            <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">First Name </label>
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Name </label>
                               <div class="col-sm-10">
                                   <input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>" >
                               </div>
                           </div>
                          
                           <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">First Name </label>
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Batch No </label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="fname" value="<?php echo $row['first_name'];?>" >
+                                  <input type="text" class="form-control" name="bno" value="<?php echo $row['batchno'];?>" >
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Sex </label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="sex" value="<?php echo $row['gender'];?>" >
                               </div>
                           </div>
                           
                               <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Last Ename</label>
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Mobile</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="lname" value="<?php echo $row['last_name'];?>" >
+                                  <input type="text" class="form-control" name="mob" value="<?php echo $row['mobile'];?>" >
                               </div>
                           </div>
-                              <div class="form-group">
+                            <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Email </label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="email" value="<?php echo $row['email'];?>" readonly >
+                                  <input type="text" class="form-control" name="email" value="<?php echo $row['email'];?>">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Interested field</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="interest" value="<?php echo $row['interest'];?>">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Other Skills</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="exception" value="<?php echo $row['exception'];?>" >
                               </div>
                           </div>
                             <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Date of birth </label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="dob" value="<?php echo $row['birthdate'];?>" readonly >
+                                  <input type="text" class="form-control" name="dob" value="<?php echo $row['birthdate'];?>" readonly>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label" style="padding-left:40px;">Active</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="active" value="<?php echo $row['active'];?>" >
                               </div>
                           </div>
                           <div style="margin-left:100px;">

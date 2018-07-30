@@ -1,6 +1,11 @@
 <?php
   session_start();
   require_once('dbconnection.php');
+
+  //see for previous login and auto matically log in user
+  include('checklogin2.php');
+  check_login2();
+
   //register code
   include('register.php');
   //login code
@@ -25,16 +30,16 @@
     <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
-        <div class="text-center" style="display:hidden;">  
-                    <?php if ($msg <> "") { ?>
-                        <div class="alert alert-dismissable alert-<?php echo $msgType; ?>">
-                        <button data-dismiss="alert" class="close" type="button">x</button>
-                        <p><?php echo $msg; ?></p>
-                    </div>
-                    <?php } 
-                    ?>
-                    </div>
+<?php include('loginlogoutmodel.php'); ?>
+
             <div class="container1">
+            <?php if ($msg <> "") { ?>
+                            <div class="alert alert-dismissable alert-<?php echo $msgType; ?>">
+                            <button data-dismiss="alert" class="close" type="button">x</button>
+                            <p><?php echo $msg; ?></p>
+                        </div>
+                        <?php } 
+                        ?>
                 <div class="logoContainer">
                     <img class="mainLogo" src="assets/img/dccLogo.svg" alt="Dot">
                     <h1 class="headLogo">CODE COMMUNITY</h1>
@@ -48,7 +53,7 @@
                 </ul>
  
                 <div class="container1Content">
-                    
+
           
                     <h1 class="one"> STEP UP YOUR CODING GAME </h1>
                     <p class="two">
@@ -135,7 +140,7 @@
             </div>
         </div>
    
-        <?php include('loginlogoutmodel.php'); ?>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

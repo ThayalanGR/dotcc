@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <title>DotCodeCommunity</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -29,10 +30,6 @@
             width: 100%;
             height: 50px;
             z-index: 10;
-            background: #eeeeee;
-            -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
-            -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
-            box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
         }
 
 
@@ -65,26 +62,31 @@
 <body style="background-color:#f3f3f3; width:100%; overflow-x:hidden;">
     <button onclick="topFunction()" id="myBtn12" style="background-color: transparent; color: lightblue;" title="Go to top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></button>
     <div id="header">
-        <nav class="navbar navbar-inverse custom-header">
-          <img src="assets/img/dccLogo.svg" id="mainLogo" style=""alt="Dot">
-          <div class="container-fluid">      
-              <div class="navbar-header" style="margin-right: -45px;"><a class="navbar-brand navbar-link" href="home.php"><strong style="padding-left:12px;">CodeCommunity</strong></a>
-                  <button class="navbar-toggle collapsed" data-toggle="collapse" style="width:25px; border-color: #fff; padding: 5px 5px 5px 1px;" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span></span><span class="icon-bar"></span></button>
-              </div>
-              <div class="collapse navbar-collapse" id="navbar-collapse">
-                      <ul class="nav navbar-nav links">
-                              <li role="presentation"><a href="home.php">Home </a></li>
-                              <li role="presentation"><a href="courses.php">Courses</a></li>
-                              <li role="presentation"><a href="news&events.php">News and Events</a></li>
-                              <li role="presentation"><a href="projectidea.php">suggest-projects</a></li>                      
-                              <?php 
-                              if(strlen($_SESSION['userlogin'])>0){?>
-                              <li role="presentation"><a href="./myprojects.php" class="custom-navbar"> My Projects <span class="badge">new</span></a></li>
-                              <?php } ?>
-                              <li role="presentation"><a href="about.php">About dCC</a></li>
-                      </ul>    
-                          <?php maindiv();?>
-              </div>
-          </div>
+        <nav class="navbar custom-header navbar-expand-md shadow-lg">
+                
+                <a class="navbar-brand navbar-link" href="home.php"><img src="assets/img/dccLogo.svg" id="mainLogo" alt="Dot"><strong style="padding-left:12px;">CodeCommunity</strong></a>
+                    <button
+                class="navbar-toggler collapsed" data-toggle="collapse" style="width:25px; border-color: #fff; padding: 5px 5px 5px 1px;"
+                data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span>&#x2630;</button>
+                <div class="collapse navbar-collapse"
+                id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li role="presentation" class="nav-item"><a href="home.php" class="nav-link">Home </a>
+                    </li>
+                    <li role="presentation" class="nav-item"><a href="courses.php" class="nav-link">Courses</a>
+                    </li>
+                    <li role="presentation" class="nav-item"><a href="news&amp;events.php" class="nav-link">News and Events</a>
+                    </li>
+                    <li role="presentation" class="nav-item"><a href="projectidea.php" class="nav-link">suggest-projects</a>
+                    </li>
+                    <?php if(strlen($_SESSION[ 'userlogin'])>0){?>
+                    <li role="presentation" class="nav-item"><a href="./myprojects.php" class="custom-navbar nav-link"> My Projects <span class="badge">new</span></a>
+                    </li>
+                    <?php } ?>
+                    <!-- <li role="presentation" class="nav-item"><a href="about.php" class="nav-link">About dCC</a>
+                    </li> -->
+                </ul>
+                <?php maindiv();?>
+            </div>
         </nav>
     </div>

@@ -2,7 +2,7 @@
           <div id="sidebar"  class="nav-collapse ">
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="#"><img src="assets/img/friends/fr-09.jpg" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="#"><img src="assets/img/dccLogo.svg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered"><?php echo $_SESSION['adminlogin'];?></h5>              	  	
 
                   <li class="sub-menu">
@@ -55,7 +55,7 @@
                   <li class="sub-menu">
                       <a href="comments.php">
                           <i class="fa fa-mail-reply-all"></i>
-                          <span>User Comments</span>
+                          <span>Project Ideas</span>
                       </a>
                   </li>
                   <li class="sub-menu">

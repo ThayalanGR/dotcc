@@ -46,7 +46,7 @@ if($num>0){
     exit();
     }
   }else{
-    $msg="email verification is pending please check your email inbox and verify your account"; 
+    $msg="email verification is pending please check your email inbox and verify your account or Contact administrator" ; 
     $msgtype="warning";
   }
 }

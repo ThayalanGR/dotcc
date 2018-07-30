@@ -52,10 +52,10 @@ exit();
 		            <input type="text" name="username" class="form-control" placeholder="User ID" autofocus>
 		            <br>
 		            <input type="password" name="password" class="form-control" placeholder="Password"><br >
-                <a  href="./password.php">forget password?</a>
-		            <input  name="login" class="btn btn-theme btn-block" type="submit">
+                <!-- <a  href="./password.php">forget password?</a> -->
+		            <input  name="login" class="btn btn-theme btn-block" value="Login" type="submit">
 		        </div>
-            <a class="btn btn-theme btn-block" href="./register.php">Admin Registration</a>
+            <!-- <a class="btn btn-theme btn-block" href="./register.php">Admin Registration</a> -->
 		      </form>	  	
 	  	</div>
 	  </div>

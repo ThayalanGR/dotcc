@@ -109,12 +109,12 @@ if(isset($_GET["file"])){
        
   <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> User Comments</h3>                  
+          	<h3><i class="fa fa-angle-right"></i> Creative StartUp Project Ideas</h3>                  
             <div class="row">
                   <div class="col-md-12">
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
-	                  	  	  <h4><i class="fa fa-angle-right"></i> All User Comments </h4>
+	                  	  	  <h4><i class="fa fa-angle-right"></i> All Ideas </h4>
 	                  	  	  <hr>
                               <thead>
                               <tr>

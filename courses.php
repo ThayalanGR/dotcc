@@ -22,9 +22,23 @@
 ?>
 <div id="wrapper">
 <!-- all main contents over here -->
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-md-8 col-sm-12 col-md-offset-2 text-center">
+      <h2 class="" style="color:#039be5;">Courses</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-sm-12 col-md-offset-2">
+      <div class="row">
+        <!-- <div class="col-3 shadow">
 
-
-
+        </div> -->
+      </div>
+    </div>
+</div>
+</div>
 
 </div>
+
 <?php include('./footer.php'); ?>

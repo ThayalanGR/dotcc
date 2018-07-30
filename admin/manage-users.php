@@ -47,10 +47,10 @@ echo "<script>alert('Data deleted');</script>";
                               <tr>
                                   <th>Sno.</th>
                                   <th class="hidden-phone">Name</th>
-                                  <th class="hidden-phone">First Name</th>
-                                  <th> Last Name</th>
+                                  <th> BatchNO</th>
                                   <th> Email Id</th>
-                                  <th> Birth Date</th>
+                                  <th> Mobile</th>
+                                  <th> Credits</th>
                               </tr>
                               </thead>
                               <tbody>
@@ -61,10 +61,10 @@ echo "<script>alert('Data deleted');</script>";
                               <tr>
                               <td><?php echo $cnt;?></td>
                               <td><?php echo $row['name'];?></td>
-                                  <td><?php echo $row['first_name'];?></td>
-                                  <td><?php echo $row['last_name'];?></td>
+                                  <td><?php echo $row['batchno'];?></td>
                                   <td><?php echo $row['email'];?></td>
-                                  <td><?php echo $row['birthdate'];?></td>
+                                  <td><?php echo $row['mobile'];?></td>
+                                  <td><?php //echo $row['credits'];?></td>
                                   <td>                              
                                      <a href="update-profile.php?uid=<?php echo $row['user_id'];?>"> 
                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
