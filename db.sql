@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2018 at 08:15 PM
+-- Generation Time: Aug 01, 2018 at 06:11 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -107,7 +107,9 @@ INSERT INTO `comments` (`comment_id`, `user_id`, `subject`, `content`, `attachme
 (22, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:07'),
 (23, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:37'),
 (24, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:41'),
-(25, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:44');
+(25, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:44'),
+(26, 12, 'sample', 'sss', '', '2018-07-29 14:48:58'),
+(27, 12, 'sasas', 'asasas', '', '2018-07-29 22:09:36');
 
 -- --------------------------------------------------------
 
@@ -297,6 +299,7 @@ CREATE TABLE `user` (
   `birthdate` date NOT NULL,
   `gender` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `mobile` int(12) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `activationcode` varchar(255) NOT NULL,
   `forgetpasswordcode` varchar(255) NOT NULL,
@@ -311,10 +314,8 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `role_id`, `name`, `birthdate`, `gender`, `email`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
-(12, 2, 'grthayalan', '1988-05-05', 'male', 'grthayalan18@gmail.com', '611028f613c65f5dd1627c515c724e84', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'BeautyPlus_20161214115942_fast.jpg', 1, '', NULL),
-(13, 2, 'grthayalan', '1980-01-01', 'male', 'skills.grthayalan18@gmail.com', '611028f613c65f5dd1627c515c724e84', '3765f0483741d19eab13f9d81e714795', 'b44384649e83321e6177837b3a149fcf', 'thayalan', '', 1, '', NULL),
-(17, 2, 'grthayalan18@gmail.com', '1991-06-17', 'male', 'dotcodecommunity@gmail.com', 'b0baee9d279d34fa1dfd71aadb908c3f', '8c36adc4f8759ad66dd08c71e06a65f0', '1f75d8e949c0a8ebb6100c7c32cf7061', '11111111', '', 1, 'WebDevelopment', 'sdsdsdws');
+INSERT INTO `user` (`user_id`, `role_id`, `name`, `birthdate`, `gender`, `email`, `mobile`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
+(12, 2, 'grthayalan', '1988-05-05', 'male', 'grthayalan18@gmail.com', NULL, '611028f613c65f5dd1627c515c724e84', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'BeautyPlus_20161214115942_fast.jpg', 1, '', NULL);
 
 --
 -- Indexes for dumped tables
@@ -434,7 +435,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `games`
@@ -488,7 +489,7 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

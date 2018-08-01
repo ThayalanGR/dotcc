@@ -14,8 +14,13 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">  
     <link href="./assets/css/site.css" rel="stylesheet" type="text/css" />
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+        <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!-- <script src="./assets/js/jquery.min.js"></script> -->
+    <!-- <script src="./assets/bootstrap/js/bootstrap.min.js"></script> -->
+
     <style>
 
         .modal-header{
