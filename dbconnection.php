@@ -8,7 +8,7 @@ define('DB_DRIVER', 'mysql');
 define('DB_SERVER', 'localhost');
 define('DB_SERVER_USERNAME', 'root');
 define('DB_SERVER_PASSWORD', '');
-define('DB_DATABASE', 'technokryon');
+define('DB_DATABASE', 'dotcc');
 
 // must end with a slash
 define('SITE_URL', 'http://localhost/testt/');

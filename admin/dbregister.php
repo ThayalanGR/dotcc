@@ -4,15 +4,15 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 ob_start();
 session_start();
 
-define('PROJECT_NAME', 'User Registration with Email Verification with PHP and Mysql- www.thesoftwareguy.in');
+define('PROJECT_NAME', 'dotcodecommunity');
 define('DB_DRIVER', 'mysql');
 define('DB_SERVER', 'localhost');
 define('DB_SERVER_USERNAME', 'root');
 define('DB_SERVER_PASSWORD', '');
-define('DB_DATABASE', 'technokryon');
+define('DB_DATABASE', 'dotcc');
 
 // must end with a slash
-define('SITE_URL', 'http://localhost/technokryon/');
+define('SITE_URL', 'http://localhost/testt/');
 
 $dboptions = array(
     PDO::ATTR_PERSISTENT => FALSE,
