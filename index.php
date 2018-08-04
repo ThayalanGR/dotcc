@@ -101,10 +101,10 @@
                 <div class="block3">
                     <h5>Dot Code Community</h5>
                     <ul>
-                        <li><a href="http://"><i class="fab fa-facebook fa-2x" alt="facebook"></i></a></li>
-                        <li><a href="http://"><i class="fab fa-github fa-2x" alt="Git"></i></a></li>
-                        <li><a href="http://"><i class="fab fa-instagram fa-2x" alt="Instagram"></i></a></li>
-                        <li><a href="http://"><i class="fab fa-youtube fa-2x" alt="Youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/dotcodecommunity/" target="_blank"><i class="fab fa-facebook fa-2x" alt="facebook"></i></a></li>
+                        <li><a href="https://github.com/dotcodecommunity" target="_blank"><i class="fab fa-github fa-2x" alt="Git"></i></a></li>
+                        <li><a href="https://www.instagram.com/dotcodecommunity/" target="_blank"><i class="fab fa-instagram fa-2x" alt="Instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCpz3ZDxmYLnLAbt6ptf5W9Q" target="_blank"><i class="fab fa-youtube fa-2x" alt="Youtube"></i></a></li>
                     </ul>
                 </div>
                 <div class="block2">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2018 at 06:11 AM
+-- Generation Time: Aug 04, 2018 at 06:21 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `technokryon`
+-- Database: `Dotcc`
 --
 
 -- --------------------------------------------------------
@@ -299,7 +299,7 @@ CREATE TABLE `user` (
   `birthdate` date NOT NULL,
   `gender` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` int(12) DEFAULT NULL,
+  `mobile` varchar(12) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `activationcode` varchar(255) NOT NULL,
   `forgetpasswordcode` varchar(255) NOT NULL,
@@ -315,7 +315,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `role_id`, `name`, `birthdate`, `gender`, `email`, `mobile`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
-(12, 2, 'grthayalan', '1988-05-05', 'male', 'grthayalan18@gmail.com', NULL, '611028f613c65f5dd1627c515c724e84', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'BeautyPlus_20161214115942_fast.jpg', 1, '', NULL);
+(12, 2, 'ThayalanGR', '1988-05-05', 'male', 'grthayalan18@gmail.com', '8489455901', '4297f44b13955235245b2497399d7a93', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'freelance.jpg', 1, 'webdevelopment', 'Networking');
 
 --
 -- Indexes for dumped tables
