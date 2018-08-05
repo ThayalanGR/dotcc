@@ -43,9 +43,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 offset-md-2 col-sm-12 offset-sm-0">
-        <div class="row justify-content-center">
-          <div class="col">
-            <div class="view zoom ">
+        <div class="row justify-content-center mb-3 shadow">
+          <div class="col p-0 "  width="100%" >
+            <div class="view zoom "  width="100%">
                 <img src="assets/img/panel1img.jpg" width="100%" class="img-fluid z-depth-1" alt="bgimage">
                 <div class="mask rgba-blue-slight text-center pt-5" >
                   <div class="container-fluid ">
@@ -66,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center ">
+        <div class="row justify-content-center mb-3">
             <div class="col">
               <div class="card mb-3 hoverable view zoom">
                   <img class="card-img-top" src="assets/img/panel2img.jpg" alt="Card image cap">

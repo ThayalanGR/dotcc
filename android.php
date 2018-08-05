@@ -26,21 +26,22 @@
     <div class="row">
       <div class="col-md-8 offset-md-2 col-sm-12 offset-sm-0">
         <!-- all main contents over here -->
-
-
         <div class="row ">
-          <div class="col text-center">
-            <h2 class="" style="color:#039be5;">Android Development</h2>
+          <div class="col text-center">          
+            <div class="divider-new mt-0 mb-4">
+              <h2 class="h3-responsive">
+                  <strong>Android Development</strong>
+              </h2>
+            </div>
           </div>
         </div>
-        <div class="row shadow p-4" id="video-container"></div>
+
+        <div class="row" id="video-container"></div>
         <!--end of  all main contents over here -->
       </div>
     </div>  
   </div>
 </div>
-  <script src="assets/js/youtube.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
-  </script>
+  <script src="assets/js/android.js"></script>
 <?php include('./footer.php'); ?>
 

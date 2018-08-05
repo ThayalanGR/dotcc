@@ -61,7 +61,7 @@
         }
         #wrapper{
             width:100%;
-            min-height:700px;
+            min-height:500px;
             margin-top:55px;
         }
     </style>
