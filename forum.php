@@ -351,7 +351,7 @@ if(isset($_POST['answerForm'])){
                                 </div>
                                 <!--Footer-->
                                 <div class="modal-footer justify-content-center">
-                                    <button type="submit" name="submitForm" id="submitForm" class="btn btn-primary waves-effect waves-light" value="Post">
+                                    <button type="submit" name="submitForm" id="submitForm" class="btn btn-primary waves-effect waves-light" value="Post">POST
                                         <i class="fa fa-paper-plane ml-1"></i>
                                     </button>
                                     <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
