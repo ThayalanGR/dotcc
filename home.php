@@ -51,7 +51,7 @@
                   <div class="container-fluid ">
                       <div class="row  ">
                         <div class="col">
-                        <img src="upload/img/<?php echo $_SESSION['uimage']; ?>"   class="img-fluid shadow-lg rounded-circle mx-auto" id="paneluserimage" alt="Responsive image">
+                        <img src="upload/img/<?php if($_SESSION['uimage'] != "") { echo $_SESSION['uimage']; } else { echo "avatar_2x.png"; }  ?>"   class="img-fluid shadow-lg rounded-circle mx-auto" id="paneluserimage" alt="Responsive image">
                         </div>
                           
                       </div>
