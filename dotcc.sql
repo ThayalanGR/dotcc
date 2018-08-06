@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2018 at 08:59 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Aug 06, 2018 at 07:12 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `technokryon`
+-- Database: `dotcc`
 --
 
 -- --------------------------------------------------------
@@ -274,6 +274,7 @@ CREATE TABLE `tbl_forum_answer` (
 --
 
 INSERT INTO `tbl_forum_answer` (`answer_id`, `batch_no`, `question_id`, `answer`, `timestamp`) VALUES
+(0, 191000, 15, 'sdsds', '2018-08-06 16:24:05'),
 (1, 191078, 1, 'yftctfcfctfctctc', '2018-08-04 06:08:59'),
 (2, 191078, 1, 'gvghvfrfrtcrtrc', '2018-08-04 06:08:59'),
 (3, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
@@ -310,7 +311,6 @@ INSERT INTO `tbl_forum_answer` (`answer_id`, `batch_no`, `question_id`, `answer`
 (34, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
 (35, 191000, 16, 'ckjnckjc', '2018-08-04 12:07:38'),
 (36, 191000, 15, 'gcjgvj', '2018-08-04 12:47:06'),
-(37, 191000, 14, '<kbd> ghdgf </kbd>', '2018-08-04 12:48:17'),
 (38, 191000, 17, 'sxn sn x x', '2018-08-04 18:54:21');
 
 -- --------------------------------------------------------
@@ -391,12 +391,11 @@ INSERT INTO `test` (`sno`, `a`, `b`, `c`) VALUES
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
-  `batch_no` int(6) NOT NULL,
   `name` varchar(255) NOT NULL,
   `birthdate` date NOT NULL,
   `gender` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` int(12) DEFAULT NULL,
+  `mobile` varchar(12) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `activationcode` varchar(255) NOT NULL,
   `forgetpasswordcode` varchar(255) NOT NULL,
@@ -411,10 +410,8 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `role_id`, `batch_no`, `name`, `birthdate`, `gender`, `email`, `mobile`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
-(12, 2, 0, 'grthayalan', '1988-05-05', 'male', 'grthayalan18@gmail.com', NULL, '611028f613c65f5dd1627c515c724e84', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'BeautyPlus_20161214115942_fast.jpg', 1, '', NULL),
-(13, 2, 191078, 'raaja vignesh', '0000-00-00', '', '', NULL, '', '', '', '', '', 0, '', NULL),
-(14, 2, 190000, 'qwerr', '0000-00-00', '', '', NULL, '', '', '', '', '', 0, '', NULL);
+INSERT INTO `user` (`user_id`, `role_id`, `name`, `birthdate`, `gender`, `email`, `mobile`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
+(12, 2, 'ThayalanGR', '1988-05-05', 'male', 'grthayalan18@gmail.com', '8489455901', '4297f44b13955235245b2497399d7a93', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'freelance.jpg', 1, 'webdevelopment', 'Networking');
 
 --
 -- Indexes for dumped tables
@@ -519,7 +516,6 @@ ALTER TABLE `test`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `batch_no` (`batch_no`),
   ADD KEY `UK_it77eq964jhfqtu54081ebtio` (`role_id`) USING BTREE;
 
 --
@@ -593,18 +589,6 @@ ALTER TABLE `role`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_forum_answer`
---
-ALTER TABLE `tbl_forum_answer`
-  MODIFY `answer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
---
--- AUTO_INCREMENT for table `tbl_forum_question`
---
-ALTER TABLE `tbl_forum_question`
-  MODIFY `question_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
@@ -614,7 +598,7 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -658,12 +642,6 @@ ALTER TABLE `playedgames`
 ALTER TABLE `point`
   ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`game_id`);
-
---
--- Constraints for table `tbl_forum_answer`
---
-ALTER TABLE `tbl_forum_answer`
-  ADD CONSTRAINT `tbl_forum_answer_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `tbl_forum_question` (`question_id`);
 
 --
 -- Constraints for table `user`

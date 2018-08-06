@@ -12,6 +12,8 @@
     <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/Pretty-Header.css"> -->
     <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
+    <link rel="stylesheet" href="assets/css/forum.css">
+
     <!-- <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">   -->
     <!-- <link href="./assets/css/site.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
@@ -61,7 +63,7 @@
         }
         #wrapper{
             width:100%;
-            min-height:500px;
+            min-height:1500px;
             margin-top:55px;
         }
     </style>

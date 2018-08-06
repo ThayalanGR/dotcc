@@ -12,7 +12,7 @@ define('DB_SERVER_PASSWORD', '');
 define('DB_DATABASE', 'dotcc');
 
 // must end with a slash
-define('SITE_URL', 'http://localhost/testt/');
+define('SITE_URL', 'http://localhost/dotcc/');
 
 $dboptions = array(
     PDO::ATTR_PERSISTENT => FALSE,

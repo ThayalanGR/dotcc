@@ -1,4 +1,4 @@
-<footer class="container-fluid text-center" style=" width:100%;">
+<footer class="container-fluid text-center" style=" width:100%; z-index:50; position:relative;">
     <div class="row">
         <div class="col-lg-4 col-md-6 footer-navigation" style="display:grid;">
              <h3><a href="#"><span><img src="assets/img/dccLogo.svg" alt="Dot" style="width:40px; margin-top:-11px; margin-right:5px; background-color:white; border-radius:10px;">CodeCommunity </span></a></h3>
@@ -71,7 +71,6 @@
         // document.documentElement.scrollTop = 0;
         // }
 
-
         function validateForm1(){
         var your_email = $.trim($("#email").val());
         if (!isValidEmail(your_email)) {
@@ -131,6 +130,14 @@
         $(function() {  
             $("body").niceScroll();
         });
+        $(function() {  
+            $("#timeline").niceScroll();
+        });
+        $(function() {  
+            $("#recentQA").niceScroll();
+        });
+        
+
     </script>
      <!-- <script src="./assets/js/youtube.js"></script> -->
 </body>
