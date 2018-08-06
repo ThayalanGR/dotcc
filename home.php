@@ -91,7 +91,7 @@
                           <!-- <footer class="blockquote-footer bg-white"><cite title="Source Title">Linus Torvalds</cite></footer> -->
                         </blockquote>            
                       <div class="card-text text-center">
-                        <button type="button" class="btn btn-warning shadow-lg" center style="border-radius:30px;">view courses</button>
+                        <a type="button" href="android.php" class="btn btn-warning shadow-lg" center style="border-radius:30px;">view courses</a>
                       </div>
                       
                     </div>
@@ -108,7 +108,7 @@
                         </blockquote>
                       </p>
                       <div class="card-text text-center">
-                        <button type="button" class="btn btn-info shadow-lg" center style="border-radius:30px;">view courses</button>
+                        <a type="button" href="web.php" class="btn btn-info shadow-lg" center style="border-radius:30px;">view courses</a>
                       </div>
                       
                     </div>
