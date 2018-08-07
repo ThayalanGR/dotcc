@@ -5,7 +5,11 @@ if (isset($_POST["sub"])) {
     require_once "phpmailer/class.phpmailer.php";
     $target_dir = "./upload/img/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $path=$_FILES["image"]["name"];
+    if($_FILES["image"]["name"] == "") {
+      $path = "avatar_2x.png";  
+    }else {
+      $path=$_FILES["image"]["name"];
+    }
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     // Check if image file is a actual image or fake image
     $check = getimagesize($_FILES["image"]["tmp_name"]);

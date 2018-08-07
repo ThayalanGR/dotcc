@@ -25,6 +25,7 @@ if($num>0){
     $_SESSION['lname']=$num['last_name'];
     $_SESSION['gender']=$num['gender'];
     $_SESSION['uimage']=trim($num['upload_image']);
+    $_SESSION['batch_no'] = $num['batchno'];
     $extra="home.php";
     $host  = $_SERVER['HTTP_HOST'];
     $uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
@@ -39,6 +40,7 @@ if($num>0){
     $_SESSION['lname']=$num['last_name'];
     $_SESSION['gender']=$num['gender'];
     $_SESSION['uimage']=trim($num['upload_image']);
+    $_SESSION['batch_no'] = $num['batchno'];
     $extra="home.php";
     $host  = $_SERVER['HTTP_HOST'];
     $uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
