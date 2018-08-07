@@ -27,15 +27,17 @@
   require 'date.php';
   $_SESSION['r_count'];
   $_SESSION['my_count'];
-  // $_SESSION['batch_no'] = 191000;
-  $session_batch_no = $_SESSION['batch_no'];
+//   $_SESSION['user_id'] = 3;
+//   $_SESSION['user_name'] = "efdeffffe";
+  $session_user_id = $_SESSION['id'];
+  $session_user_name = $_SESSION['name'];
   
   if(isset($_POST['submitForm'])){
       $tags = mysqli_real_escape_string($DB, $_POST['group1']);
       $question = mysqli_real_escape_string($DB, $_POST['question']);
       if($question != "")
       {
-      $sql = "INSERT INTO tbl_forum_question (batch_no, question, tags) VALUES ('$session_batch_no', '$question', '$tags')";
+        $sql = "INSERT INTO tbl_forum_question (`user_id`, `user_name`, question, tags) VALUES ('$session_user_id', '$session_user_name', '$question', '$tags')";
       if ($DB->query($sql) === TRUE) {
           echo '<script>window.location.href="index.php"</script>';
       }
@@ -47,7 +49,7 @@
     $answer = mysqli_real_escape_string($DB, $_POST['answer_post']);
     $ques_id = $_POST['quid'];
     if($answer != ""){
-        $sql = "INSERT INTO tbl_forum_answer (batch_no, question_id, answer) VALUES ('$session_batch_no', '$ques_id', '$answer')";
+        $sql = "INSERT INTO tbl_forum_answer (`user_id`,`user_name`, question_id, answer) VALUES ('$session_user_id', '$session_user_name', '$ques_id', '$answer')";
         if ($DB->query($sql) === TRUE) {
             echo '<script>window.location.href="index.php"</script>';
         }
@@ -259,21 +261,14 @@
                                         // output data of each row
                                         while($row = $result->fetch_assoc()) {
                                         $qid = $row['question_id'];
-                                        $batch_no = $row['batch_no'];
-                                        $usr_sql = "SELECT * FROM user WHERE batch_no = $batch_no ";
-                                        $usr_result = $DB->query($usr_sql);
-                                        if ($usr_result->num_rows > 0) {
-                                            // output data of each row
-                                            $usr_row = $usr_result->fetch_assoc();
-                                            $usr_name = $usr_row['name'];
-                                        }
+                                        $user_id = $row['user_id'];
                                 ?>
 
                                 <div class="row">
                                     <div class="col-2">
                                         <div class="small ">
                                             <b style="font-size:12px;">
-                                                <?php echo $usr_row['name'];
+                                                <?php echo $row['user_name'];
                                                       // echo "ThayalanGR";
                                                 ?>
                                             </b>
@@ -317,20 +312,13 @@
                                 <div id="ques<?php echo $row['question_id'];?>" class="collapse" style="background-color: #fff; padding: 10px;">
                                     <?php  if ($result1->num_rows > 0) {
                                         while($row1 = $result1->fetch_assoc()) {
-                                            $batch_no = $row1['batch_no'];
-                                            $usr_sql1 = "SELECT * FROM user WHERE batch_no = $batch_no ";
-                                            $usr_result1 = $DB->query($usr_sql1);
-                                            if ($usr_result1->num_rows > 0) {
-                                                // output data of each row
-                                                $usr_row1 = $usr_result1->fetch_assoc();
-                                                $usr_name = $usr_row1['name'];
-                                            }
+                                            $user_id = $row1['user_id'];
                                     ?>
                                     <div class="row p-2">
                                         <div class="col-2">
                                             <div class="small" style="font-size:12px;">
                                                 <b>
-                                                    <?php echo $usr_name;?>
+                                                    <?php echo $row1['user_name'];?>
                                                 </b>
                                             </div>
                                             <div class="small" style="font-size:10px;">
@@ -377,27 +365,20 @@
                         <div id="myQA" class="tabcontent">
                             <div class="container-fluid">
                                 <?php
-                                    $sql = "SELECT * FROM tbl_forum_question WHERE batch_no = $session_batch_no ORDER BY question_id DESC";
+                                    $sql = "SELECT * FROM tbl_forum_question WHERE user_id = $session_user_id ORDER BY question_id DESC";
                                     $result = $DB->query($sql);
                                     $_SESSION['my_count'] = $result->num_rows;
                                     if ($result->num_rows > 0) {
                                         // output data of each row
                                         while($row = $result->fetch_assoc()) {
                                             $qid = $row['question_id'];
-                                            $batch_no = $row['batch_no'];
-                                                $usr_sql = "SELECT * FROM user WHERE batch_no = $batch_no ";
-                                                $usr_result = $DB->query($usr_sql);
-                                                if ($usr_result->num_rows > 0) {
-                                                    // output data of each row
-                                                    $usr_row = $usr_result->fetch_assoc();
-                                                    $usr_name = $usr_row['name'];
-                                                }
+                                            $user_id = $row['user_id'];
                                 ?>
                                 <div class="row p-2">
                                     <div class="col-2">
                                         <div class="small" style="font-size:12px;">
                                             <b>
-                                                <?php echo $usr_name ;?>
+                                                <?php echo $row['user_name'] ;?>
                                             </b>
                                         </div>
                                         <div class="small" style="font-size:10px;">
@@ -431,20 +412,13 @@
                                     <div id="myques<?php echo $row['question_id'];?>" class="collapse" style="background-color: #ffff; padding: 10px;">
                                     <?php  if ($result1->num_rows > 0) {
                                         while($row1 = $result1->fetch_assoc()) {
-                                            $batch_no = $row1['batch_no'];
-                                                $usr_sql1 = "SELECT * FROM user WHERE batch_no = $batch_no ";
-                                                $usr_result1 = $DB->query($usr_sql1);
-                                                if ($usr_result1->num_rows > 0) {
-                                                    // output data of each row
-                                                    $usr_row1 = $usr_result1->fetch_assoc();
-                                                    $usr_name = $usr_row1['name'];
-                                                }
+                                            $user_id = $row1['user_id'];
                                     ?>
                                     <div class="row p-2">
                                         <div class="col-2">
                                             <div class="small" style="font-size:12px;">
                                                 <b>
-                                                    <?php echo $usr_name;?>
+                                                    <?php echo $row1['user_name'];?>
                                                 </b>
                                             </div>
                                             <div class="small" style="font-size:10px;">
