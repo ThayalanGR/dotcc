@@ -80,6 +80,8 @@ echo "<script>alert('Data deleted');</script>";
                                   <td>                              
                                      <a href="update-profile.php?uid=<?php echo $row['user_id'];?>"> 
                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                     <a href="view-history.php?uid=<?php echo $row['user_id'];?>"> 
+                                     <button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i></button></a>
                                      <a href="manage-users.php?id=<?php echo $row['user_id'];?>"> 
                                      <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a>
                                   </td>
