@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2018 at 10:20 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Aug 08, 2018 at 08:17 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -275,6 +275,7 @@ CREATE TABLE `tbl_forum_answer` (
 --
 
 INSERT INTO `tbl_forum_answer` (`answer_id`, `user_id`, `user_name`, `question_id`, `answer`, `timestamp`) VALUES
+(0, 12, 'ThayalanGR', 24, 'asasas', '2018-08-08 05:42:58'),
 (1, 1, 'dcdcdcdc', 1, 'yftctfcfctfctctc', '2018-08-04 06:08:59'),
 (2, 1, 'dcdcdcdc', 1, 'gvghvfrfrtcrtrc', '2018-08-04 06:08:59'),
 (3, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
@@ -352,6 +353,7 @@ CREATE TABLE `tbl_forum_question` (
 --
 
 INSERT INTO `tbl_forum_question` (`question_id`, `user_id`, `user_name`, `question`, `tags`, `timestamp`) VALUES
+(0, 12, 'ThayalanGR', 'd cmnd cnmd cmdcmnd', 'Android', '2018-08-08 06:05:40'),
 (1, 1, 'dcdcdcdc', 'Android', 'seryyy', '2018-08-01 14:07:32'),
 (2, 1, 'dcdcdcdc', 'vzvvzvzv', 'Web', '2018-08-01 14:07:32'),
 (3, 1, 'dcdcdcdc', 'zdsvdsf', 'Android', '2018-08-01 14:07:32'),
@@ -568,12 +570,6 @@ ALTER TABLE `category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
 -- AUTO_INCREMENT for table `games`
 --
 ALTER TABLE `games`
@@ -586,113 +582,20 @@ ALTER TABLE `gift`
   MODIFY `gift_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `news`
---
-ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `orderedgift`
---
-ALTER TABLE `orderedgift`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `playedgames`
---
-ALTER TABLE `playedgames`
-  MODIFY `playedgames_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `point`
---
-ALTER TABLE `point`
-  MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_forum_answer`
---
-ALTER TABLE `tbl_forum_answer`
-  MODIFY `answer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
-
---
--- AUTO_INCREMENT for table `tbl_forum_question`
---
-ALTER TABLE `tbl_forum_question`
-  MODIFY `question_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `test`
---
-ALTER TABLE `test`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `admin`
---
-ALTER TABLE `admin`
-  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`);
-
---
--- Constraints for table `comments`
---
-ALTER TABLE `comments`
-  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `games`
 --
 ALTER TABLE `games`
   ADD CONSTRAINT `games_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`);
-
---
--- Constraints for table `orderedgift`
---
-ALTER TABLE `orderedgift`
-  ADD CONSTRAINT `FK` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk1` FOREIGN KEY (`gift_id`) REFERENCES `gift` (`gift_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `playedgames`
---
-ALTER TABLE `playedgames`
-  ADD CONSTRAINT `playedgames_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `playedgames_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`game_id`);
-
---
--- Constraints for table `point`
---
-ALTER TABLE `point`
-  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`game_id`);
-
---
--- Constraints for table `tbl_forum_answer`
---
-ALTER TABLE `tbl_forum_answer`
-  ADD CONSTRAINT `tbl_forum_answer_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `tbl_forum_question` (`question_id`);
-
---
--- Constraints for table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

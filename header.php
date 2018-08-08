@@ -84,31 +84,34 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link dropdown-item text-warning" href="home.php"><small>Home</small></a>
-            </li>
-            <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle dropdown-item text-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <small> Courses</small>
-                </a>
-                <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="android.php"><i class="fab fa-android shadow text-primary fa-1x "></i> &nbsp;Android Development</a>
-                    <a class="dropdown-item" href="web.php"><i class="fab fa-html5 shadow text-danger "></i> &nbsp;Web Development</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item disabled" data-toggle="tooltip" data-placement="top" href="#" title="Coming Soon"> <i class="fab fa-python"></i> &nbsp;Python Development</a>
-                    <a class="dropdown-item disabled" data-toggle="tooltip" data-placement="top" href="#" title="Coming Soon"> <i class="fas fa-user-secret"></i> &nbsp;Ethical Hacking</a>
-                    <a class="dropdown-item disabled" data-toggle="tooltip" data-placement="top" href="#" title="Coming Soon"> <i class="fas fa-robot"></i> &nbsp;Machine Learning</a>
-                </div>
-            <li class="nav-item">
-                <a class="nav-link dropdown-item text-warning" href="projectidea.php"><small>suggest-projects</small></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link dropdown-item text-warning" href="myprojects.php"><small>My Projects</small></a>
-            </li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link dropdown-item text-warning" href="#"><small>About</small></a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link dropdown-item text-warning" href="home.php"><small>Home</small></a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle dropdown-item text-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <small> Courses</small>
+                    </a>
+                    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="android.php"><i class="fab fa-android shadow text-primary fa-1x "></i> &nbsp;Android Development</a>
+                        <a class="dropdown-item" href="web.php"><i class="fab fa-html5 shadow text-danger "></i> &nbsp;Web Development</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" data-toggle="tooltip" data-placement="top" href="#" title="Coming Soon"> <i class="fab fa-python"></i> &nbsp;Python Development</a>
+                        <a class="dropdown-item disabled" data-toggle="tooltip" data-placement="top" href="#" title="Coming Soon"> <i class="fas fa-user-secret"></i> &nbsp;Ethical Hacking</a>
+                        <a class="dropdown-item disabled" data-toggle="tooltip" data-placement="top" href="#" title="Coming Soon"> <i class="fas fa-robot"></i> &nbsp;Machine Learning</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item text-warning" href="forum.php"><small>Q &amp; A</small></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item text-warning" href="projectidea.php"><small>suggest-projects</small></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item text-warning" href="myprojects.php"><small>My Projects</small></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item text-warning" href="#"><small>About</small></a>
+                </li>
             </ul>
             <div class="my-2 my-lg-0">
                 <?php maindiv();?>
