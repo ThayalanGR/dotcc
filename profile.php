@@ -2,7 +2,7 @@
   session_start();
   $_SESSION['choosecolor'] = 1;
   require_once('dbconnection.php');
-
+  include('./dbconnection.php');
   include('checklogin1.php');
   check_login1();
   //register code
@@ -35,7 +35,7 @@
             <li><a href="userprofile.php" class="<?php if($_SESSION['choosecolor'] == 1) {  echo "active";} ?>">My Profile</a></li>
             <li><a href="userupdate.php" class="<?php if($_SESSION['choosecolor'] == 2) {  echo "active";} ?>">Update Profile</a></li>
             <li><a href="userpasschange.php " class="<?php if($_SESSION['choosecolor'] == 3) {  echo "active";} ?>">Change Password</a></li>
-            <li><a href="useractivity.php" class="<?php if($_SESSION['choosecolor'] == 4) {  echo "active";} ?>">My Activity</a></li>
+            <li><a href="useractivity.php" class="<?php if($_SESSION['choosecolor'] == 4) {  echo "active";} ?>" name="<?php $row['user_id'] ?>">My Activity</a></li>
             <li><a href="usercredits.php" class="<?php if($_SESSION['choosecolor'] == 5) {  echo "active";} ?>">Credits</a></li>
             <li><a href="userreputation.php" class="<?php if($_SESSION['choosecolor'] == 6) {  echo "active";} ?>">Reputation</a></li>
         </ul>
@@ -55,13 +55,14 @@
                 <input type="submit" class="btn btn-primary" style="border-radius:50px;" name="uploadimage" value="Upload"/> -->
             </div>
             </form>
-            <form name="form1" class="form-profile mt-0 pt-0 text-center" method="post" action="">
+            <form name="form5" class="form-profile mt-0 pt-0 text-center" method="post" action="">
             <?php
               //selecting info about user and display in form
                include('./dbconnection.php');
                $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['id']."'");
                $row=mysqli_fetch_array($ret);
                ?>
+               
             <div class="form-row "> 
                 <label>
                     <span>Name</span>
@@ -97,6 +98,7 @@
                 </label> 
             </div>
             </form>
+           
             <!--<div class="form-row">
                 <button type="submit">Login</button>
             </div>-->

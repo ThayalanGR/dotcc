@@ -91,7 +91,6 @@ if(isset($_POST['submit']))
                               <input type="hidden" name="uid" value="<?php echo $row['user_id'];?>">
                               <td><input type="number" require="" name="text1" id="note1" autocomplete="OFF" placeholder="credits here..."></td>
                               <td><input type="text" require="" name="text2" id="note" autocomplete="OFF" placeholder="reason here..."></td>
-                              <!-- <input type="hidden" name="adddate" value="<?php echo $row['adddate'];?>"> -->
                               <td><button type="submit" name="submit" class="btn btn-primary btn-sm">submit</button></td>
                               </form>
                           </tr>

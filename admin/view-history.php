@@ -3,7 +3,6 @@ session_start();
 include('dbconnection.php');
 include("checklogin.php");
 check_login();
-
 if(isset($_GET['uid']))
 {
     $uid = $_GET['uid'];
@@ -42,7 +41,6 @@ if(isset($_GET['uid']))
                               <thead>
                               <tr>
                                   <th>Sno.</th>
-                                  <th> User Id.</th>
                                   <th> Credits</th>
                                   <th> Reason</th>
                                   <th> Date & Time</th>
@@ -56,7 +54,6 @@ if(isset($_GET['uid']))
                                 {  $cnt=1;?>
                                     <tr>
                                     <td style="font-size:12px;"><?php echo $cnt;?></td> 
-                                    <td style="font-size:12px;"><?php echo $row1['userid'];?></t>
                                     <td style="font-size:12px;"><?php echo $row1['credits'];?></t>
                                     <td style="font-size:12px;"><?php echo $row1['reason'];?></td>
                                     <td style="font-size:12px;"><?php echo $row1['date1'];?></t>

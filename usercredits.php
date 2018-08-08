@@ -2,7 +2,7 @@
   session_start();
   $_SESSION['choosecolor'] = 5;
   require_once('dbconnection.php');
-
+  include('./dbconnection.php');
   include('checklogin1.php');
   check_login1();
   //register code
@@ -21,7 +21,6 @@
   // include('leftpan.php');
   //code for comments
   // include('comments.php');
-
 ?>
 <link rel="stylesheet" href="assets/css/custom.css">
 <link rel="stylesheet" href="assets/css/form-credits.css">
@@ -38,9 +37,7 @@
         <li><a href="usercredits.php" class="<?php if($_SESSION['choosecolor'] == 5) {  echo "active";} ?>">Credits</a></li>
         <li><a href="userreputation.php" class="<?php if($_SESSION['choosecolor'] == 6) {  echo "active";} ?>">Reputation</a></li>
     </ul>
-
     <div class="main-content">
-
         <!-- Display the User Credits -->
 
         <div class="form-credits" >
@@ -50,13 +47,51 @@
                    <h1>My Credits</h1>
                 </label>
             </div> 
-
+            
+            <section class="wrapper">
+				<div class="row">
+                  <div class="col-md-12">
+                      <div class="content-panel">
+                          <table class="table table-striped table-advance table-hover">
+	                  	  	  <hr>
+                              <thead>
+                              <tr>
+                                  <th><h6 style="color:blue;">Sno.</h6></th>
+                                  <th><h6 style="color:blue;"> Credits</h6></th>
+                                  <th><h6 style="color:blue;"> Reason</h6></th>
+                                  <th><h6 style="color:blue;"> Date & Time</h6></th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                               <!-- Fetching Credits  -->
+                               <form name="form1" class="form-profile mt-0 pt-0 text-center" method="post" action="">
+                               <?php
+                               //selecting info about user and display in form
+                               include('./dbconnection.php');
+                               $ret = mysqli_query($DB,"select * from user where user_id='".$_SESSION['id']."'");
+                               $row=mysqli_fetch_array($ret);
+                               $uid = $row['user_id'];
+                               $ret5=mysqli_query($DB,"SELECT * FROM credits where userid='$uid' order by credits_id desc");
+                               $cnt=1;
+                               while($row5=mysqli_fetch_array($ret5))
+                                {  $cnt=1;?>
+                                    <tr>
+                                    <td style="font-size:12px;"><?php echo $cnt;?></td> 
+                                    <td style="font-size:12px;"><?php echo $row5['credits'];?></td>
+                                    <td style="font-size:12px;"><?php echo $row5['reason'];?></td>
+                                    <td style="font-size:12px;"><?php echo $row5['date1'];?></>
+                                    </tr>
+                                <?php $cnt=$cnt+1; }?>
+                                </form>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+		</section>
         </div>
-
     </div>
-
-
-
+</form>
 </div>
 
 <?php include('./footer.php'); ?>
