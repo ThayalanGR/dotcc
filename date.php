@@ -4,10 +4,14 @@ function timeCalc ($db_timestamp)
     date_default_timezone_set('Asia/Kolkata');
     $time_db = strtotime($db_timestamp);
     $current_time = strtotime(date("Y-m-d h:i:s",time()));
-    $minute =  round(abs(($time_db - $current_time)/60+721));
-    $hour =  round(abs(($time_db - $current_time)/60/60+12));
+    $minute =  round(abs(($time_db - $current_time)/60));
+    $hour =  round(abs(($time_db - $current_time)/60/60));
     $day =  round(abs(($time_db - $current_time)/60/60/24));
-    if($minute == 1)
+    if($minute < 1)
+    {
+        echo "a few secs ago ";
+    }
+    elseif($minute == 1)
     {
         echo $minute . " min ago ";
     }

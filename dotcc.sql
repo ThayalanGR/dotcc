@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2018 at 07:12 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: Aug 07, 2018 at 10:20 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -263,7 +263,8 @@ INSERT INTO `role` (`role_id`, `role`) VALUES
 
 CREATE TABLE `tbl_forum_answer` (
   `answer_id` int(10) NOT NULL,
-  `batch_no` int(6) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
   `question_id` int(10) NOT NULL,
   `answer` varchar(255) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -273,45 +274,63 @@ CREATE TABLE `tbl_forum_answer` (
 -- Dumping data for table `tbl_forum_answer`
 --
 
-INSERT INTO `tbl_forum_answer` (`answer_id`, `batch_no`, `question_id`, `answer`, `timestamp`) VALUES
-(0, 191000, 15, 'sdsds', '2018-08-06 16:24:05'),
-(1, 191078, 1, 'yftctfcfctfctctc', '2018-08-04 06:08:59'),
-(2, 191078, 1, 'gvghvfrfrtcrtrc', '2018-08-04 06:08:59'),
-(3, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
-(4, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
-(5, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
-(6, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(7, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(8, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(9, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(10, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(11, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(12, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(13, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(14, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(15, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(16, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(17, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(18, 191000, 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
-(19, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
-(20, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
-(21, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
-(22, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
-(23, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(24, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(25, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(26, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(27, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(28, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(29, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(30, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(31, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(32, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(33, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(34, 191000, 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
-(35, 191000, 16, 'ckjnckjc', '2018-08-04 12:07:38'),
-(36, 191000, 15, 'gcjgvj', '2018-08-04 12:47:06'),
-(38, 191000, 17, 'sxn sn x x', '2018-08-04 18:54:21');
+INSERT INTO `tbl_forum_answer` (`answer_id`, `user_id`, `user_name`, `question_id`, `answer`, `timestamp`) VALUES
+(1, 1, 'dcdcdcdc', 1, 'yftctfcfctfctctc', '2018-08-04 06:08:59'),
+(2, 1, 'dcdcdcdc', 1, 'gvghvfrfrtcrtrc', '2018-08-04 06:08:59'),
+(3, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
+(4, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
+(5, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
+(6, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(7, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(8, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(9, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(10, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(11, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(12, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(13, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(14, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(15, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(16, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(17, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(18, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:49'),
+(19, 1, 'dcdcdcdc', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
+(20, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
+(21, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
+(22, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:55'),
+(23, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(24, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(25, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(26, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(27, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(28, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(29, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(30, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(31, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(32, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(33, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(34, 2, 'dweweeee', 1, 'evlmflkvmlfvmflv', '2018-08-04 12:00:56'),
+(35, 2, 'dweweeee', 16, 'ckjnckjc', '2018-08-04 12:07:38'),
+(36, 2, 'dweweeee', 15, 'gcjgvj', '2018-08-04 12:47:06'),
+(37, 2, 'dweweeee', 14, '<kbd> ghdgf </kbd>', '2018-08-04 12:48:17'),
+(38, 2, 'dweweeee', 17, 'jjjbdbchdcdncjcdncjdn', '2018-08-04 18:11:14'),
+(39, 2, 'dweweeee', 17, 'yybuhnjmmimm', '2018-08-05 05:16:31'),
+(40, 1, 'dcdcdcdc', 18, 'dcdsccsdc', '2018-08-07 15:52:27'),
+(41, 1, 'dcdcdcdc', 18, 'scscsdcsdc', '2018-08-07 15:52:33'),
+(42, 1, 'dcdcdcdc', 19, 'sdcscscsdc', '2018-08-07 15:52:46'),
+(43, 1, 'dcdcdcdc', 20, 'sfffff', '2018-08-07 16:27:24'),
+(44, 1, 'dcdcdcdc', 21, 'yfxdxdxdxdx', '2018-08-07 18:56:03'),
+(45, 1, 'dcdcdcdc', 21, 'trdxdxdxdxdx', '2018-08-07 18:56:11'),
+(46, 1, 'dcdcdcdc', 21, 'vgvgvg', '2018-08-07 18:56:18'),
+(47, 13, '', 18, 'vvvvvvvvvvvvvvvvvvvvvv', '2018-08-07 19:32:51'),
+(48, 13, '', 21, 'cccccccccccccc', '2018-08-07 19:32:58'),
+(49, 13, '', 21, 'cccccccccccccccccccc', '2018-08-07 19:33:05'),
+(50, 13, '', 20, 'cccccccccccccccccccccccc', '2018-08-07 19:33:12'),
+(51, 3, 'efdeffffe', 18, 'esesesrerx', '2018-08-07 19:59:23'),
+(52, 3, 'efdeffffe', 21, 'sn nzx sn znsz', '2018-08-07 20:00:07'),
+(53, 3, 'efdeffffe', 23, 'cskjnjknvjksnv', '2018-08-07 20:14:09'),
+(54, 13, 'Raaja Vignesh', 24, 'gfxgfxxcxcx', '2018-08-07 20:16:12'),
+(55, 13, 'Raaja Vignesh', 24, 'b b  ', '2018-08-07 20:16:28'),
+(56, 13, 'Raaja Vignesh', 24, 'gfxgfxx', '2018-08-07 20:19:03');
 
 -- --------------------------------------------------------
 
@@ -321,7 +340,8 @@ INSERT INTO `tbl_forum_answer` (`answer_id`, `batch_no`, `question_id`, `answer`
 
 CREATE TABLE `tbl_forum_question` (
   `question_id` int(10) NOT NULL,
-  `batch_no` int(6) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
   `question` varchar(255) NOT NULL,
   `tags` varchar(255) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -331,25 +351,31 @@ CREATE TABLE `tbl_forum_question` (
 -- Dumping data for table `tbl_forum_question`
 --
 
-INSERT INTO `tbl_forum_question` (`question_id`, `batch_no`, `question`, `tags`, `timestamp`) VALUES
-(1, 191078, 'Android', 'seryyy', '2018-08-01 14:07:32'),
-(2, 191078, 'vzvvzvzv', 'Web', '2018-08-01 14:07:32'),
-(3, 191078, 'zdsvdsf', 'Android', '2018-08-01 14:07:32'),
-(4, 191078, 'dvvvzvz', 'Android', '2018-08-01 14:07:32'),
-(5, 191078, 'dvvvzvz', 'Android', '2018-08-01 14:07:32'),
-(6, 191078, 'XXxzzxxzx', 'Android', '2018-08-01 16:05:19'),
-(7, 191078, 'cvcvcc', 'Android', '2018-08-01 16:13:05'),
-(8, 191078, 'fvfvnf ', 'Android', '2018-08-01 16:53:07'),
-(9, 191078, 'test\r\n', 'Android', '2018-08-01 16:53:24'),
-(10, 191078, 'xx', 'Android', '2018-08-01 18:47:09'),
-(11, 191078, '', 'Android', '2018-08-04 06:12:49'),
-(12, 191078, '', 'Android', '2018-08-04 06:21:45'),
-(13, 191078, 'xxmx', 'Android', '2018-08-04 06:22:02'),
-(14, 191078, 'm,dx md x', 'Android', '2018-08-04 06:25:59'),
-(15, 191078, 'sx msx ', 'Android', '2018-08-04 06:26:10'),
-(16, 191000, 'hjhjbjhbjbhjbuhb', 'Web', '2018-08-04 07:53:56'),
-(17, 191078, 'bgbfgbfgbfgbfbfbbgbgbg', 'Android', '2018-08-04 16:58:40'),
-(18, 191000, 'kjnjknjknkj', 'Android', '2018-08-04 18:56:27');
+INSERT INTO `tbl_forum_question` (`question_id`, `user_id`, `user_name`, `question`, `tags`, `timestamp`) VALUES
+(1, 1, 'dcdcdcdc', 'Android', 'seryyy', '2018-08-01 14:07:32'),
+(2, 1, 'dcdcdcdc', 'vzvvzvzv', 'Web', '2018-08-01 14:07:32'),
+(3, 1, 'dcdcdcdc', 'zdsvdsf', 'Android', '2018-08-01 14:07:32'),
+(4, 1, 'dcdcdcdc', 'dvvvzvz', 'Android', '2018-08-01 14:07:32'),
+(5, 1, 'dcdcdcdc', 'dvvvzvz', 'Android', '2018-08-01 14:07:32'),
+(6, 1, 'dcdcdcdc', 'XXxzzxxzx', 'Android', '2018-08-01 16:05:19'),
+(7, 1, 'dcdcdcdc', 'cvcvcc', 'Android', '2018-08-01 16:13:05'),
+(8, 1, 'dcdcdcdc', 'fvfvnf ', 'Android', '2018-08-01 16:53:07'),
+(9, 1, 'dcdcdcdc', 'test\r\n', 'Android', '2018-08-01 16:53:24'),
+(10, 191078, '', 'xx', 'Android', '2018-08-01 18:47:09'),
+(11, 2, 'dweweeee', '', 'Android', '2018-08-04 06:12:49'),
+(12, 2, 'dweweeee', '', 'Android', '2018-08-04 06:21:45'),
+(13, 2, 'dweweeee', 'xxmx', 'Android', '2018-08-04 06:22:02'),
+(14, 2, 'dweweeee', 'm,dx md x', 'Android', '2018-08-04 06:25:59'),
+(15, 2, 'dweweeee', 'sx msx ', 'Android', '2018-08-04 06:26:10'),
+(16, 2, 'dweweeee', 'hjhjbjhbjbhjbuhb', 'Web', '2018-08-04 07:53:56'),
+(17, 2, 'dweweeee', 'bgbfgbfgbfgbfbfbbgbgbg', 'Android', '2018-08-04 16:58:40'),
+(18, 2, 'dweweeee', ' b b n  vfcdcr', 'Android', '2018-08-05 05:16:57'),
+(19, 1, 'dcdcdcdc', 'dcdccsdcsc', 'Android', '2018-08-07 15:52:39'),
+(20, 1, 'dcdcdcdc', 'dsjnvsdnv', 'Android', '2018-08-07 15:54:26'),
+(21, 1, 'dcdcdcdc', 'nn,mn,mn,mn,m\r\n', 'Android', '2018-08-07 17:57:02'),
+(22, 3, 'efdeffffe', 'md xd xd xdx ndx ', 'Android', '2018-08-07 20:00:17'),
+(23, 3, 'efdeffffe', 'kjncjncncc', 'Android', '2018-08-07 20:14:01'),
+(24, 13, 'Raaja Vignesh', 'cgfcgfcgfcg', 'Web', '2018-08-07 20:16:04');
 
 -- --------------------------------------------------------
 
@@ -411,7 +437,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `role_id`, `name`, `birthdate`, `gender`, `email`, `mobile`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
-(12, 2, 'ThayalanGR', '1988-05-05', 'male', 'grthayalan18@gmail.com', '8489455901', '4297f44b13955235245b2497399d7a93', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'freelance.jpg', 1, 'webdevelopment', 'Networking');
+(12, 2, 'ThayalanGR', '1988-05-05', 'male', 'grthayalan18@gmail.com', '8489455901', '4297f44b13955235245b2497399d7a93', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'freelance.jpg', 1, 'webdevelopment', 'Networking'),
+(13, 2, 'Raaja Vignesh', '1999-03-19', 'male', 'rajavignesh36@gmail.com', '9489943518', '5a92c41649a4f14e246a3755eaad0cee', 'fd89145e1e57bcbea505f1497d94f825', '8a085511b837b1b5117594e3e957e72e', '191078', 'FB_IMG_1479739199040.jpg', 1, 'WebDevelopment', '');
 
 --
 -- Indexes for dumped tables
@@ -589,6 +616,18 @@ ALTER TABLE `role`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `tbl_forum_answer`
+--
+ALTER TABLE `tbl_forum_answer`
+  MODIFY `answer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT for table `tbl_forum_question`
+--
+ALTER TABLE `tbl_forum_question`
+  MODIFY `question_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
@@ -598,7 +637,7 @@ ALTER TABLE `test`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
@@ -642,6 +681,12 @@ ALTER TABLE `playedgames`
 ALTER TABLE `point`
   ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`game_id`);
+
+--
+-- Constraints for table `tbl_forum_answer`
+--
+ALTER TABLE `tbl_forum_answer`
+  ADD CONSTRAINT `tbl_forum_answer_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `tbl_forum_question` (`question_id`);
 
 --
 -- Constraints for table `user`
