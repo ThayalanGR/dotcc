@@ -51,21 +51,32 @@ echo "<script>alert('Data deleted');</script>";
                                   <th> BatchNO</th>
                                   <th> Email Id</th>
                                   <th> Mobile</th>
-                                  <th> Credits</th>
+                                  <th> Total Credits</th>
                               </tr>
                               </thead>
                               <tbody>
                               <?php $ret=mysqli_query($con,"select * from user");
 							  $cnt=1;
 							  while($row=mysqli_fetch_array($ret))
-							  {?>
+							  {  
+                                $uid = $row['user_id'] ;
+                                ?>
                               <tr>
                               <td><?php echo $cnt;?></td>
                               <td><?php echo $row['name'];?></td>
                                   <td><?php echo $row['batchno'];?></td>
                                   <td><?php echo $row['email'];?></td>
                                   <td><?php echo $row['mobile'];?></td>
-                                  <td><?php //echo $row['credits'];?></td>
+                                  <td style="font-size:12px;">
+                               <?php $ret2=mysqli_query($con,"SELECT credits FROM credits where userid = $uid ");
+                                $temp = 0;
+                                while($row1=mysqli_fetch_array($ret2))
+                                {
+                                    $temp += $row1['credits'];
+                                }
+                                echo $temp;
+                                 ?>
+                                 </td>
                                   <td>                              
                                      <a href="update-profile.php?uid=<?php echo $row['user_id'];?>"> 
                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>

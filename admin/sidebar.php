@@ -11,7 +11,12 @@
                           <span>Manage Users</span>
                       </a>
                   </li>
-
+                  <li class="sub-menu">
+                      <a href="addcredits.php">
+                          <i class="fa fa-line-chart"></i>
+                          <span>ADD Credits</span>
+                      </a>
+                  </li>
 
                   <li class="sub-menu">
                   <a   id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true"  href="addgames.php">
