@@ -74,7 +74,7 @@
                                $ret5=mysqli_query($DB,"SELECT * FROM credits where userid='$uid' order by credits_id desc");
                                $cnt=1;
                                while($row5=mysqli_fetch_array($ret5))
-                                {  $cnt=1;?>
+                                {  ?>
                                     <tr>
                                     <td style="font-size:12px;"><?php echo $cnt;?></td> 
                                     <td style="font-size:12px;"><?php echo $row5['credits'];?></td>
