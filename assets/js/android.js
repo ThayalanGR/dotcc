@@ -13,7 +13,7 @@ function constructVideosDomTree(videoslist) {
       // Loop through videos and append output
       videosListItems.forEach(item => {
         let videoId = item.snippet.resourceId.videoId
-        let vidThumbnail = item.snippet.thumbnails.standard.url
+        let vidThumbnail = item.snippet.thumbnails.high.url
         let vidTitle = item.snippet.title
         let vidDescription = item.snippet.description
         len= vidDescription.length
@@ -51,7 +51,7 @@ function constructVideosDomTree(videoslist) {
       })
 
       // Output videos
-      videoContainer.innerHTML = output;
+      videoContainer.innerHTML = videoContainer.innerHTML+output;
     } else {
       videoContainer.innerHTML = 'No Uploaded Videos';
     }
@@ -83,14 +83,17 @@ function getPlaylist() {
       part: "snippet",
       key: "AIzaSyDK7Zf2-_GkU5RrxsvPRTN7-YKxGEDfwrU",
       maxResults: 32,
-      channelId: "UCXgGY0wkgOzynnHvSEVmE3A"
+      channelId: "UCpz3ZDxmYLnLAbt6ptf5W9Q"
   }
   const url=`https://www.googleapis.com/youtube/v3/playlists?part=${data.part}&channelId=${data.channelId}&maxResults=${data.maxResults}&key=${data.key}`;
   fetch(url).
   then(data=> data.json()).
   then(result=> {
       console.log(result)
-      const videolist = result.items[1].id
+      let videolist = result.items[1].id
+      console.log(videolist)
+      getVideos(videolist)
+      videolist = result.items[2].id
       console.log(videolist)
       getVideos(videolist)
   }).

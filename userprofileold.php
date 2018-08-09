@@ -7,7 +7,7 @@ if(isset($_POST['profile']))
     $name=$_POST['name'];
 	$fname=$_POST['fname'];
 	$lname=$_POST['lname'];
-	if(mysqli_query($DB,"update user set name='$name',first_name='$fname',last_name='$lname' where user_id='".$_SESSION['id']."'")){
+	if(mysqli_query($DB,"update user set name='$name',first_name='$fname',last_name='$lname' where user_id='".$_SESSION['userid']."'")){
         $_SESSION['msg']="Profile Updated successfully";
     }else{
         $_SESSION['msg']="Profile not updated please check parameters";
@@ -36,7 +36,7 @@ if(isset($_POST['uploadimage']))
         }else{
             move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
         }
-        if(mysqli_query($DB,"update user set upload_image='$path' where user_id='".$_SESSION['id']."'")){
+        if(mysqli_query($DB,"update user set upload_image='$path' where user_id='".$_SESSION['userid']."'")){
             $_SESSION['msg']="Profile picture Updated successfully";
         }else{
             $_SESSION['msg']="Profile picture not updated please check parameters";
@@ -55,7 +55,7 @@ $sql=mysqli_query($DB,"SELECT password FROM admin where password='$oldpassword'"
 $num=mysqli_fetch_array($sql);
 if($num>0)
 {
-$userid=$_SESSION['id'];
+$userid=$_SESSION['userid'];
 $newpass=md5($_POST['newpass']);
  $ret=mysqli_query($DB,"update user set password='$newpass' where user_id='$userid'");
 $_SESSION['msg']="Password Changed Successfully !!";
@@ -219,7 +219,7 @@ return true;
 <?php
 //selecting info about user and display in form
     include('./dbconnection.php');
-    $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['id']."'");
+    $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['userid']."'");
     $row=mysqli_fetch_array($ret);
  ?>
 <div class="col-md-3 col-lg-3 " align="center" >

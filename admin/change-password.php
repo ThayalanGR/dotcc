@@ -10,7 +10,7 @@ $sql=mysqli_query($con,"SELECT password FROM admin where password='$oldpassword'
 $num=mysqli_fetch_array($sql);
 if($num>0)
 {
-$adminid=$_SESSION['id'];
+$adminid=$_SESSION['adminid'];
 $newpass=md5($_POST['newpass']);
  $ret=mysqli_query($con,"update admin set password='$newpass' where id='$adminid'");
 $_SESSION['msg']="Password Changed Successfully !!";

@@ -21,7 +21,7 @@ $sql=mysqli_query($DB,"SELECT password FROM admin where password='$oldpassword'"
 $num=mysqli_fetch_array($sql);
 if($num>0)
 {
-$userid=$_SESSION['id'];
+$userid=$_SESSION['userid'];
 $newpass=md5($_POST['newpass']);
  $ret=mysqli_query($DB,"update user set password='$newpass' where user_id='$userid'");
 $_SESSION['msg']="Password Changed Successfully !!";

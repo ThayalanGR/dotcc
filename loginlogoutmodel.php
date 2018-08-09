@@ -34,7 +34,7 @@
                             <div class="form-group has-success">
                                 <label class="control-label" style="font-size:12px;" for="uname">Name </label>
                                 <input class="form-control  input-sm"  
-                                type="text" name="uname" style="font-size:12px;" id="uname">
+                                type="text" name="uname" autocomplete="OFF" style="font-size:12px;" id="uname">
                             </div>
                             <div class="form-group has-success">
                                 <label class="control-label" style="font-size:12px;" for="fname">Batch-no </label>

@@ -59,7 +59,7 @@
             <?php
               //selecting info about user and display in form
                include('./dbconnection.php');
-               $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['id']."'");
+               $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['userid']."'");
                $row=mysqli_fetch_array($ret);
                ?>
                

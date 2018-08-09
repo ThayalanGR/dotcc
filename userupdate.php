@@ -40,7 +40,7 @@ if(isset($_POST['uploadimage']))
     }else{
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
     }
-    if(mysqli_query($DB,"update user set upload_image='$path' where user_id='".$_SESSION['id']."'")){
+    if(mysqli_query($DB,"update user set upload_image='$path' where user_id='".$_SESSION['userid']."'")){
         $_SESSION['uimage'] = $path;
         $_SESSION['msg']="Profile picture Updated successfully";
     }else{
@@ -57,7 +57,7 @@ if(isset($_POST['profile']))
     $interest=$_POST['interest'];
 	$exception=$_POST['exception'];
     
-	if(mysqli_query($DB,"update user set name='$name',mobile='$mobile',interest='$interest',exception='$exception' where user_id='".$_SESSION['id']."'")){
+	if(mysqli_query($DB,"update user set name='$name',mobile='$mobile',interest='$interest',exception='$exception' where user_id='".$_SESSION['userid']."'")){
         
         $_SESSION['msg']="Profile Updated successfully";
         }else{
@@ -119,7 +119,7 @@ if(isset($_POST['profile']))
             <?php
               //selecting info about user and display in form
                include('./dbconnection.php');
-               $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['id']."'");
+               $ret=mysqli_query($DB,"select * from user where user_id='".$_SESSION['userid']."'");
                $row=mysqli_fetch_array($ret);
                ?>
             <div class="form-row "> 

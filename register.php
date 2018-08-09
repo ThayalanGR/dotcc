@@ -1,5 +1,6 @@
 <?php
 
+$uTempId = "";
 if (isset($_POST["sub"])) {
     require_once "dbregister.php";
     require_once "phpmailer/class.phpmailer.php";
@@ -75,6 +76,7 @@ if (isset($_POST["sub"])) {
         $result = $stmt->rowCount();
         if ($result > 0) {
             $lastID = $DB->lastInsertId();
+            $uTempId = $lastID;
             $id = base64_encode($lastID);
           $message = "     
           Hello $name,
@@ -102,6 +104,13 @@ if (isset($_POST["sub"])) {
           $mail->MsgHTML($message);
           try {
             $mail->send();
+            include('dbconnection.php');
+            $text2 = "Registration Bonus Credits";
+            $text1 = 25;
+            $adddate = date('Y-m-d H:i:s');
+            $sql = "INSERT INTO credits(userid,credits,reason,date1) VALUES ('$uTempId','$text1','$text2','$adddate')";
+            $result = mysqli_query($DB,$sql);
+            // allocateRegistrationBonus($uTempId);
             $msg = "An email has been sent for verfication.";
             $msgType = "success";
           } catch (Exception $ex) {
@@ -118,4 +127,14 @@ if (isset($_POST["sub"])) {
       $msgtype="warning";
     }
   }
+
+
+  // function allocateRegistrationBonus($id) {
+  //   include('dbconnection.php');
+  //   $text2 = "Registration Bonus Credits";
+  //   $text1 = 25;
+  //   $adddate = date('Y-m-d H:i:s');
+  //   $sql = "INSERT INTO credits(userid,credits,reason,date1) VALUES ('$id','$text1','$text2','$adddate')";
+  //   $result = mysqli_query($con,$sql);
+  // }
 ?>

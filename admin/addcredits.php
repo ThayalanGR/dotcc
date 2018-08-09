@@ -13,10 +13,10 @@ if(isset($_POST['submit']))
  $sql = "INSERT INTO credits(userid,credits,reason,date1) VALUES ('$id','$text1','$text2','$adddate')";
  $result = mysqli_query($con,$sql);
  if(!$result){
-    echo "Not Submitted...:-(";
+    // echo "<script> alert('Not Submitted...:-( '); </script>";
   }
  else{
-    echo "Submitted Registered...!";
+    // echo "<script> alert('Submitted...:-( '); </script>";
   }
 // mysqli_close($con);
 

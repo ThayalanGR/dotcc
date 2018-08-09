@@ -18,7 +18,7 @@ if($num>0){
     // setcookie("login",$useremail,time() + (86400  * 10));
     // setcookie("password",$dec_password,time() + (86400  * 10));
     $_SESSION['userlogin']=$_POST['email'];
-    $_SESSION['id']=$num['user_id'];
+    $_SESSION['userid']=$num['user_id'];
     $_SESSION['name']=$num['name'];
     $_SESSION['fname']=$num['first_name'];
     $_SESSION['dob']=$num['birthdate'];
@@ -33,7 +33,7 @@ if($num>0){
     exit();
     }else{
     $_SESSION['userlogin']=$_POST['email'];
-    $_SESSION['id']=$num['user_id'];
+    $_SESSION['userid']=$num['user_id'];
     $_SESSION['name']=$num['name'];
     $_SESSION['fname']=$num['first_name'];
     $_SESSION['dob']=$num['birthdate'];
@@ -49,13 +49,13 @@ if($num>0){
     }
   }else{
     $msg="email verification is pending please check your email inbox and verify your account or Contact administrator" ; 
-    $msgtype="warning";
+    $msgType="danger";
   }
 }
 else
 {
   $msg="username or password is incorrect";
-  $msgtype="warning";
+  $msgType="danger";
 }
 }
 

@@ -11,7 +11,7 @@ if($num>0)
 {
 $extra="manage-users.php";
 $_SESSION['adminlogin']=$num['name'];
-$_SESSION['id']=$num['user_id'];
+$_SESSION['adminid']=$num['user_id'];
 echo "<script>window.location.href='".$extra."'</script>";
 exit();
 }

@@ -5,7 +5,7 @@ $_SESSION['r_count'];
 $_SESSION['my_count'];
 //   $_SESSION['user_id'] = 3;
 //   $_SESSION['user_name'] = "efdeffffe";
-$session_user_id = $_SESSION['id'];
+$session_user_id = $_SESSION['userid'];
 $session_user_name = $_SESSION['name'];
 
 if(isset($_POST['submitForm'])){

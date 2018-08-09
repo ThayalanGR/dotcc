@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2018 at 08:17 AM
+-- Generation Time: Aug 09, 2018 at 06:42 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -97,19 +97,38 @@ CREATE TABLE `comments` (
   `adddate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `comments`
+-- Table structure for table `credits`
 --
 
-INSERT INTO `comments` (`comment_id`, `user_id`, `subject`, `content`, `attachment`, `adddate`) VALUES
-(20, 12, 'all set', 'work completed', 'BeautyPlus_20161214115942_fast.jpg', '2017-12-31 20:54:16'),
-(21, 12, 'video testing', 'testing video downloading attachment', 'test.mp4', '2017-12-31 21:00:13'),
-(22, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:07'),
-(23, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:37'),
-(24, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:41'),
-(25, 12, 'kwgdskg', 'jhblhbil', '', '2018-01-02 19:03:44'),
-(26, 12, 'sample', 'sss', '', '2018-07-29 14:48:58'),
-(27, 12, 'sasas', 'asasas', '', '2018-07-29 22:09:36');
+CREATE TABLE `credits` (
+  `credits_id` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `credits` int(11) NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `date1` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `credits`
+--
+
+INSERT INTO `credits` (`credits_id`, `userid`, `credits`, `reason`, `date1`) VALUES
+(19, 12, 12, 'this is for testing', '2018-08-09 14:46:40'),
+(20, 12, 12, 'this is for testing', '2018-08-09 14:47:33'),
+(21, 13, 17, 'this is for second testing', '2018-08-09 14:48:01'),
+(22, 12, 11, 'dded', '2018-08-09 14:48:36'),
+(23, 12, 11, 'aasaa', '2018-08-09 14:49:31'),
+(24, 12, 11, 'asasa', '2018-08-09 14:49:49'),
+(25, 12, 10, 'test success', '2018-08-09 15:00:50'),
+(26, 12, 10, 'test success', '2018-08-09 15:03:17'),
+(27, 12, 10, 'test success', '2018-08-09 15:03:33'),
+(28, 12, 11, 'Registration Bonus Credits', '2018-08-09 16:42:56'),
+(29, 0, 25, 'Registration Bonus Credits', '2018-08-09 15:06:12'),
+(30, 16, 25, 'Registration Bonus Credits', '2018-08-09 15:10:19'),
+(31, 17, 25, 'Registration Bonus Credits', '2018-08-09 15:27:11');
 
 -- --------------------------------------------------------
 
@@ -275,7 +294,6 @@ CREATE TABLE `tbl_forum_answer` (
 --
 
 INSERT INTO `tbl_forum_answer` (`answer_id`, `user_id`, `user_name`, `question_id`, `answer`, `timestamp`) VALUES
-(0, 12, 'ThayalanGR', 24, 'asasas', '2018-08-08 05:42:58'),
 (1, 1, 'dcdcdcdc', 1, 'yftctfcfctfctctc', '2018-08-04 06:08:59'),
 (2, 1, 'dcdcdcdc', 1, 'gvghvfrfrtcrtrc', '2018-08-04 06:08:59'),
 (3, 1, 'dcdcdcdc', 1, 'rflmlkcmlkcm', '2018-08-04 12:00:48'),
@@ -331,7 +349,25 @@ INSERT INTO `tbl_forum_answer` (`answer_id`, `user_id`, `user_name`, `question_i
 (53, 3, 'efdeffffe', 23, 'cskjnjknvjksnv', '2018-08-07 20:14:09'),
 (54, 13, 'Raaja Vignesh', 24, 'gfxgfxxcxcx', '2018-08-07 20:16:12'),
 (55, 13, 'Raaja Vignesh', 24, 'b b  ', '2018-08-07 20:16:28'),
-(56, 13, 'Raaja Vignesh', 24, 'gfxgfxx', '2018-08-07 20:19:03');
+(56, 13, 'Raaja Vignesh', 24, 'gfxgfxx', '2018-08-07 20:19:03'),
+(57, 12, 'ThayalanGR', 25, 'jdbcjkdbcdbc', '2018-08-08 06:23:04'),
+(58, 12, 'ThayalanGR', 25, 'x c cb cc ', '2018-08-08 06:23:18'),
+(59, 12, 'ThayalanGR', 24, 'xc c c b cbccbc c', '2018-08-08 06:23:30'),
+(60, 12, 'ThayalanGR', 26, 'c  cbn cnb cnbc ', '2018-08-08 06:24:05'),
+(61, 12, 'ThayalanGR', 24, 'asasa', '2018-08-08 06:56:08'),
+(62, 12, 'ThayalanGR', 26, 'asas', '2018-08-08 06:56:23'),
+(63, 12, 'ThayalanGR', 15, 'asasas', '2018-08-08 06:56:38'),
+(64, 12, 'ThayalanGR', 18, 'ydfydfyrfd', '2018-08-08 06:57:12'),
+(65, 12, 'ThayalanGR', 25, 'rtyery', '2018-08-08 06:57:28'),
+(66, 12, 'ThayalanGR', 20, 'asasa', '2018-08-08 07:12:38'),
+(67, 12, 'ThayalanGR', 21, 'asasas', '2018-08-08 07:12:46'),
+(68, 12, 'ThayalanGR', 21, 'asasasasasddfddd', '2018-08-08 07:13:06'),
+(69, 12, 'ThayalanGR', 26, 'asasa', '2018-08-08 07:36:21'),
+(70, 12, 'ThayalanGR', 26, 'asasas', '2018-08-08 07:36:32'),
+(71, 12, 'ThayalanGR', 26, 'asasas', '2018-08-08 07:36:48'),
+(72, 12, 'ThayalanGR', 24, 'asasas', '2018-08-08 07:37:13'),
+(73, 12, 'ThayalanGR', 28, 'rtgfdgfg', '2018-08-08 07:46:59'),
+(74, 17, 'ThayalanGR', 29, 'here it is this is my soluton', '2018-08-09 15:31:02');
 
 -- --------------------------------------------------------
 
@@ -353,7 +389,6 @@ CREATE TABLE `tbl_forum_question` (
 --
 
 INSERT INTO `tbl_forum_question` (`question_id`, `user_id`, `user_name`, `question`, `tags`, `timestamp`) VALUES
-(0, 12, 'ThayalanGR', 'd cmnd cnmd cmdcmnd', 'Android', '2018-08-08 06:05:40'),
 (1, 1, 'dcdcdcdc', 'Android', 'seryyy', '2018-08-01 14:07:32'),
 (2, 1, 'dcdcdcdc', 'vzvvzvzv', 'Web', '2018-08-01 14:07:32'),
 (3, 1, 'dcdcdcdc', 'zdsvdsf', 'Android', '2018-08-01 14:07:32'),
@@ -377,7 +412,12 @@ INSERT INTO `tbl_forum_question` (`question_id`, `user_id`, `user_name`, `questi
 (21, 1, 'dcdcdcdc', 'nn,mn,mn,mn,m\r\n', 'Android', '2018-08-07 17:57:02'),
 (22, 3, 'efdeffffe', 'md xd xd xdx ndx ', 'Android', '2018-08-07 20:00:17'),
 (23, 3, 'efdeffffe', 'kjncjncncc', 'Android', '2018-08-07 20:14:01'),
-(24, 13, 'Raaja Vignesh', 'cgfcgfcgfcg', 'Web', '2018-08-07 20:16:04');
+(24, 13, 'Raaja Vignesh', 'cgfcgfcgfcg', 'Web', '2018-08-07 20:16:04'),
+(25, 12, 'ThayalanGR', 'cd,c dm,c dmc ', 'Android', '2018-08-08 06:22:56'),
+(26, 12, 'ThayalanGR', 'cb dc dc c bc ', 'Android', '2018-08-08 06:23:56'),
+(27, 12, 'ThayalanGR', 'sfasa', 'Android', '2018-08-08 07:39:30'),
+(28, 12, 'ThayalanGR', 'sdsdsdsdsdsdsds', 'Android', '2018-08-08 07:39:52'),
+(29, 12, 'ThayalanGR', 'wewewew', 'Web', '2018-08-08 09:48:37');
 
 -- --------------------------------------------------------
 
@@ -439,8 +479,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `role_id`, `name`, `birthdate`, `gender`, `email`, `mobile`, `password`, `activationcode`, `forgetpasswordcode`, `batchno`, `upload_image`, `active`, `interest`, `exception`) VALUES
-(12, 2, 'ThayalanGR', '1988-05-05', 'male', 'grthayalan18@gmail.com', '8489455901', '4297f44b13955235245b2497399d7a93', '8386c45b0f34184b30ce596a42f4da14', '6115e83e90387ab572a9c85e9ad95e41', 'thayalann', 'freelance.jpg', 1, 'webdevelopment', 'Networking'),
-(13, 2, 'Raaja Vignesh', '1999-03-19', 'male', 'rajavignesh36@gmail.com', '9489943518', '5a92c41649a4f14e246a3755eaad0cee', 'fd89145e1e57bcbea505f1497d94f825', '8a085511b837b1b5117594e3e957e72e', '191078', 'FB_IMG_1479739199040.jpg', 1, 'WebDevelopment', '');
+(17, 2, 'ThayalanGR', '1999-05-11', 'male', 'grthayalan18@gmail.com', '8489455901', '0154bbe213b9b5884c745a4f2e0660c0', '2330cb4e4632614f37860f46e8f630c2', '022efa627c65ef6950ab45dcdb6b5bb6', '191106', 'freelance.jpg', 1, 'WebDevelopment', 'Android');
 
 --
 -- Indexes for dumped tables
@@ -471,6 +510,12 @@ ALTER TABLE `category`
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`comment_id`),
   ADD KEY `UK` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `credits`
+--
+ALTER TABLE `credits`
+  ADD PRIMARY KEY (`credits_id`);
 
 --
 -- Indexes for table `games`
@@ -570,6 +615,18 @@ ALTER TABLE `category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `credits`
+--
+ALTER TABLE `credits`
+  MODIFY `credits_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
 -- AUTO_INCREMENT for table `games`
 --
 ALTER TABLE `games`
@@ -582,20 +639,113 @@ ALTER TABLE `gift`
   MODIFY `gift_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `orderedgift`
+--
+ALTER TABLE `orderedgift`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `playedgames`
+--
+ALTER TABLE `playedgames`
+  MODIFY `playedgames_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `point`
+--
+ALTER TABLE `point`
+  MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `tbl_forum_answer`
+--
+ALTER TABLE `tbl_forum_answer`
+  MODIFY `answer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+
+--
+-- AUTO_INCREMENT for table `tbl_forum_question`
+--
+ALTER TABLE `tbl_forum_question`
+  MODIFY `question_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`);
+
+--
+-- Constraints for table `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `games`
 --
 ALTER TABLE `games`
   ADD CONSTRAINT `games_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`);
+
+--
+-- Constraints for table `orderedgift`
+--
+ALTER TABLE `orderedgift`
+  ADD CONSTRAINT `FK` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk1` FOREIGN KEY (`gift_id`) REFERENCES `gift` (`gift_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `playedgames`
+--
+ALTER TABLE `playedgames`
+  ADD CONSTRAINT `playedgames_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  ADD CONSTRAINT `playedgames_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`game_id`);
+
+--
+-- Constraints for table `point`
+--
+ALTER TABLE `point`
+  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`game_id`);
+
+--
+-- Constraints for table `tbl_forum_answer`
+--
+ALTER TABLE `tbl_forum_answer`
+  ADD CONSTRAINT `tbl_forum_answer_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `tbl_forum_question` (`question_id`);
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

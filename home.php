@@ -50,7 +50,7 @@
             <div class="col "  width="100%" >
                 <div class="view zoom shadow "  width="100%">
                     <img src="assets/img/panel1img.jpg" width="100%" style="border-radius:40px;" class="img-fluid shadow-lg rounded" alt="bgimage">
-                    <div class="mask rgba-blue-slight text-center pt-5" >
+                    <div class="mask rgba-blue-slight text-center pt-4" >
                     <div class="container-fluid ">
                         <div class="row  ">
                             <div class="col">
@@ -60,8 +60,10 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h3 class="animated bounceInDown h3-responsive pt-3 white-text panelusertext"><strong>Hello <span class="yellow-text"><?php echo $_SESSION['name']; ?></span> !</strong></h3>                     
-                                <h3 class="text-center h3-responsive pt-3 white-text panelusertext animated fadeInUpBig "><strong> Welcome to DotCodeCommunity! </strong></h3>
+                                <h3 class="animated bounceInDown h3-responsive pt-1 white-text panelusertext"><strong>Hello <span class="yellow-text"><?php echo $_SESSION['name']; ?></span> !</strong></h3>                     
+                                <h3 class="text-center h3-responsive pt-1 white-text panelusertext animated fadeInUpBig ">Welcome to DotCodeCommunity! <br>
+                                  <small>  Recent Credits : </small><br>*** <span id="recentCreditMsg" class="orange-text"><?php echo $_SESSION['creditMessage']; ?></span>***<br><span id="recentCreditScore" class="blue-text bg-dark p-1 rounded-circle "><?php echo $_SESSION['creditScore']; ?></span>
+                                </h3>
                             </div>
                         </div>
                         </div>
@@ -69,6 +71,7 @@
                 </div>
             </div>
             </div>
+            
             <div class="row justify-content-center mb-3">
                 <div class="col">
                 <div class="card mb-3 hoverable view zoom">

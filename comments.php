@@ -22,7 +22,7 @@ if (isset($_POST["comment"])) {
     }
     $subject = $_POST["subject"];
     $content = $_POST["content"];
-    $id=$_SESSION['id'];
+    $id=$_SESSION['userid'];
     $email=$_SESSION['userlogin'];
     $sql = "SELECT COUNT(*) AS count from user where email = :email_id";
     try {

@@ -2,7 +2,7 @@
   session_start();
   $_SESSION['choosecolor'] = 5;
   require_once('dbconnection.php');
-  include('./dbconnection.php');
+//   include('./dbconnection.php');
   include('checklogin1.php');
   check_login1();
   //register code
@@ -50,6 +50,20 @@
             
             <section class="wrapper">
 				<div class="row">
+                    <div class="col-md-12 shadow hoverable">
+                        <div class="row">
+                            <div class="col">
+                                Total Credits
+                            </div>
+                        </div>
+                        <div class="row blue-text">
+                            <div class="col" id="totalCredits">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="row">
                   <div class="col-md-12">
                       <div class="content-panel">
                           <table class="table table-striped table-advance table-hover">
@@ -67,21 +81,25 @@
                                <form name="form1" class="form-profile mt-0 pt-0 text-center" method="post" action="">
                                <?php
                                //selecting info about user and display in form
-                               include('./dbconnection.php');
-                               $ret = mysqli_query($DB,"select * from user where user_id='".$_SESSION['id']."'");
-                               $row=mysqli_fetch_array($ret);
-                               $uid = $row['user_id'];
+                            //    $ret = mysqli_query($DB,"select * from user where user_id='".$_SESSION['userid']."'");
+                            //    $row=mysqli_fetch_array($ret);
+                               $uid = $_SESSION['userid'];
                                $ret5=mysqli_query($DB,"SELECT * FROM credits where userid='$uid' order by credits_id desc");
                                $cnt=1;
+                               $temp = 0;
                                while($row5=mysqli_fetch_array($ret5))
-                                {  ?>
+                                { $temp += $row5['credits'];  ?>
                                     <tr>
                                     <td style="font-size:12px;"><?php echo $cnt;?></td> 
                                     <td style="font-size:12px;"><?php echo $row5['credits'];?></td>
                                     <td style="font-size:12px;"><?php echo $row5['reason'];?></td>
                                     <td style="font-size:12px;"><?php echo $row5['date1'];?></>
                                     </tr>
-                                <?php $cnt=$cnt+1; }?>
+                                <?php $cnt=$cnt+1; }
+                                    echo "<script> const totalCredits = document.getElementById('totalCredits');
+                                                    totalCredits.innerHTML = ".$temp."
+                                        </script>";
+                                ?>
                                 </form>
                               </tbody>
                           </table>
