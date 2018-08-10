@@ -41,7 +41,7 @@
                         <?php } 
                         ?>
                 <div class="logoContainer">
-                    <img class="mainLogo" src="assets/img/dccLogo.svg" alt="Dot">
+                    <img class="mainLogo" src="assets/img/dccLogo.png" alt="Dot">
                     <h1 class="headLogo">CODE COMMUNITY</h1>
                     <p>Saranathan College of Engineering</p>
                 </div>
@@ -93,7 +93,7 @@
 
             <div class="container3">
                 <div class="block1"> 
-                    <img class="mainLogo" src="assets/img/Group 1.png" alt="Dot">
+                    <img class="mainLogo" src="assets/img/dccLogo.png" alt="Dot">
                     <h1 class="headLogo">CODE COMMUNITY</h1>
                     <p>Saranathan College of Engineering</p>
                     <blockquote>© 2018 dotCodeCommunity</blockquote>
@@ -117,16 +117,24 @@
                 </div>
                 <div class="block4">
                     <h5>Developed by :-</h5>
-                    <!-- <p>
+                     <p>
                         Thayalan G R <br>
                         (C.S.E Dept - SCE)
                     </p>
                     <ul>
-                        <li><a href="http://"><i class="fab fa-facebook" alt="facebook"></i></a></li>
-                        <li><a href="http://"><i class="fab fa-github" alt="Git"></i></a></li>
-                        <li><a href="http://"><i class="fab fa-instagram" alt="Instagram"></i></a></li>
-                        <li><a href="http://"><i class="fab fa-youtube" alt="Youtube"></i></a></li>
-                    </ul> -->
+                        <li><a href="https://www.facebook.com/thayalan.gr.77"><i class="fab fa-facebook" alt="facebook"></i></a></li>
+                        <li><a href="https://github.com/ThayalanGR"><i class="fab fa-github" alt="Git"></i></a></li>
+                        <li><a href="https://www.instagram.com/thayalangr/"><i class="fab fa-instagram" alt="Instagram"></i></a></li>
+                        <!-- <li><a href="http://"><i class="fab fa-youtube" alt="Youtube"></i></a></li> -->
+                    </ul> 
+                    <p>
+                        Raaja Vignesh <br>
+                        (C.S.E Dept - SCE)
+                    </p>
+                    <p>
+                        Ambarish P K <br>
+                        (C.S.E Dept - SCE)
+                    </p>
                   
                     
 

@@ -8,7 +8,7 @@ define('DB_DRIVER', 'mysql');
 define('DB_SERVER', 'sql101.epizy.com');
 define('DB_SERVER_USERNAME', 'epiz_22544223');
 define('DB_SERVER_PASSWORD', 'peJkWknSP');
-define('DB_DATABASE', 'epiz_22544223_dotcc');
+define('DB_DATABASE', 'epiz_22544223_dotcc'); 
 
 // must end with a slash
 define('SITE_URL', 'http://dotcodecommunity.epizy.com/');

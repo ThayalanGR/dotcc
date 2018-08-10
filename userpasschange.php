@@ -13,25 +13,19 @@
   include('decidelogin.php');
   //including header
 
-  if(isset($_POST['passwordupdate']))
-{
-include('./dbconnection.php');
-$oldpassword=md5($_POST['oldpass']);
-$sql=mysqli_query($DB,"SELECT password FROM admin where password='$oldpassword'");
-$num=mysqli_fetch_array($sql);
-if($num>0)
-{
-$userid=$_SESSION['userid'];
-$newpass=md5($_POST['newpass']);
- $ret=mysqli_query($DB,"update user set password='$newpass' where user_id='$userid'");
-$_SESSION['msg']="Password Changed Successfully !!";
-//header('location:user.php');
-}
-else
-{
-$_SESSION['msg']="Old Password not match !!";
-}
-}
+  if(isset($_POST['passwordupdate'])){
+    include('./dbconnection.php');
+    // $oldpassword=md5($_POST['oldpass']);
+    // $sql=mysqli_query($DB,"SELECT password FROM admin where password='$oldpassword'");
+    // $num=mysqli_fetch_array($sql);
+    // if($num>0)
+    // {
+    $userid=$_SESSION['userid'];
+    $newpass=md5($_POST['newpass']);
+    $ret=mysqli_query($DB,"update user set password='$newpass' where user_id='$userid'");
+    $_SESSION['msg']="Password Changed Successfully !!";
+    //header('location:user.php');
+    }
 
   include('header.php');
 
@@ -115,12 +109,12 @@ $_SESSION['msg']="Old Password not match !!";
                    ?>
             </div> 
 
-            <div class="form-row">
+            <!-- <div class="form-row">
                 <label>
                     <span>Old Password</span>
                     <input type="password" name="oldpass" value="">
                 </label>
-            </div>
+            </div> -->
             <div class="form-row">
                 <label>
                     <span>New Password</span>
