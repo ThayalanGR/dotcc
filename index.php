@@ -122,10 +122,10 @@
                         (C.S.E Dept - SCE)
                     </p>
                     <ul>
-                        <li><a href="https://www.facebook.com/thayalan.gr.77"><i class="fab fa-facebook" alt="facebook"></i></a></li>
-                        <li><a href="https://github.com/ThayalanGR"><i class="fab fa-github" alt="Git"></i></a></li>
-                        <li><a href="https://www.instagram.com/thayalangr/"><i class="fab fa-instagram" alt="Instagram"></i></a></li>
-                        <!-- <li><a href="http://"><i class="fab fa-youtube" alt="Youtube"></i></a></li> -->
+                        <li><a href="https://www.facebook.com/thayalan.gr.77" target="_blank"><i class="fab fa-facebook" alt="facebook"></i></a></li>
+                        <li><a href="https://github.com/ThayalanGR" target="_blank"><i class="fab fa-github" alt="Git"></i></a></li>
+                        <li><a href="https://www.instagram.com/thayalangr/" target="_blank"><i class="fab fa-instagram" alt="Instagram"></i></a></li>
+                        <!-- <li><a href="http://" target="_blank"><i class="fab fa-youtube" alt="Youtube"></i></a></li> -->
                     </ul> 
                     <p>
                         Raaja Vignesh <br>
