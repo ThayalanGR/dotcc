@@ -2,17 +2,18 @@
 
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 ob_start();
-session_start();
-
 define('PROJECT_NAME', 'dotCodecommunity');
+session_start();
 define('DB_DRIVER', 'mysql'); 
 define('DB_SERVER', 'sql101.epizy.com');
 define('DB_SERVER_USERNAME', 'epiz_22544223');
 define('DB_SERVER_PASSWORD', 'peJkWknSP');
 define('DB_DATABASE', 'epiz_22544223_dotcc');
 
+
 // must end with a slash
 define('SITE_URL', 'http://dotcodecommunity.epizy.com/');
+
 
 $dboptions = array(
     PDO::ATTR_PERSISTENT => FALSE,

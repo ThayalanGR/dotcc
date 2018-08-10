@@ -90,10 +90,7 @@ function getPlaylist() {
   then(data=> data.json()).
   then(result=> {
       console.log(result)
-      let videolist = result.items[1].id
-      console.log(videolist)
-      getVideos(videolist)
-      videolist = result.items[2].id
+      let videolist = result.items[2].id
       console.log(videolist)
       getVideos(videolist)
   }).

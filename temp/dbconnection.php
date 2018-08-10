@@ -5,10 +5,10 @@ ob_start();
 define('PROJECT_NAME', 'dotCodecommunity');
 session_start();
 define('DB_DRIVER', 'mysql'); 
-define('DB_SERVER', 'sql103.epizy.com');
-define('DB_SERVER_USERNAME', 'epiz_22408459');
-define('DB_SERVER_PASSWORD', 'N3uMF12TmG');
-define('DB_DATABASE', 'epiz_22408459_dotcc');
+define('DB_SERVER', 'sql101.epizy.com');
+define('DB_SERVER_USERNAME', 'epiz_22544223');
+define('DB_SERVER_PASSWORD', 'peJkWknSP');
+define('DB_DATABASE', 'epiz_22544223_dotcc');
 
 // must end with a slash
 define('SITE_URL', 'http://dotcodecommunity.epizy.com/');
