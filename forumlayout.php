@@ -99,7 +99,9 @@
                                         </div>
                                         <div class="col-9">
                                             <div class="row" style="font-size:15px; font-weight:300;">
+                                 
                                                 <?php echo $row1['answer'];?>
+                                  
                                             </div>
                                         </div>
                                     </div>
@@ -205,7 +207,9 @@
                                         </div>
                                         <div class="col-9">
                                             <div class="row" style="font-size:15px; font-weight:300;">
-                                                <?php echo $row1['answer'];?>
+                                                <textarea name="" id="">
+                                                    <?php echo $row1['answer'];?>
+                                                </textarea>
                                                 <hr>
                                             </div>
                                         </div>

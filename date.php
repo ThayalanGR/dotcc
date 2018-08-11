@@ -1,11 +1,12 @@
 <?php
 function timeCalc ($db_timestamp)
 {
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('UTC');
+    $sys_time = date('d-m-Y H:i:s', time());
     $time_db = strtotime($db_timestamp);
-    $current_time = strtotime(date("Y-m-d h:i:s",time()));
-    $minute =  round(abs(($time_db - $current_time)/60-721));
-    $hour =  round(abs(($time_db - $current_time)/60/60-12));
+    $current_time = strtotime($sys_time); 
+    $minute =  round(abs(($time_db - $current_time)/60+240));
+    $hour =  round(abs(($time_db - $current_time)/60/60+4));
     $day =  round(abs(($time_db - $current_time)/60/60/24));
     if($minute < 1)
     {

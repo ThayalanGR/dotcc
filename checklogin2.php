@@ -5,7 +5,7 @@ if(strlen($_SESSION['userlogin'])!=0)
 	{	
         $_SESSION['msg']="";
 		// $_SESSION["login"]="";
-        $extra="home.php";
+        $extra="home";
         $host  = $_SERVER['HTTP_HOST'];
         $uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
         header("location:http://$host$uri/$extra");

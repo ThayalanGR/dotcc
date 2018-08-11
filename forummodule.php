@@ -11,6 +11,7 @@ $session_user_name = $_SESSION['name'];
 if(isset($_POST['submitForm'])){
     $tags = mysqli_real_escape_string($DB, $_POST['group1']);
     $question = mysqli_real_escape_string($DB, $_POST['question']);
+    $question = htmlspecialchars($question);
     if($question != "")
     {
       $sql = "INSERT INTO tbl_forum_question (`user_id`, `user_name`, question, tags) VALUES ('$session_user_id', '$session_user_name', '$question', '$tags')";
@@ -23,6 +24,7 @@ if(isset($_POST['submitForm'])){
 //secondblock from forum moduke
 if(isset($_POST['answerForm'])){
   $answer = mysqli_real_escape_string($DB, $_POST['answer_post']);
+  $answer = htmlspecialchars($answer);
   $ques_id = $_POST['quid'];
   if($answer != ""){
       $sql = "INSERT INTO tbl_forum_answer (`user_id`,`user_name`, question_id, answer) VALUES ('$session_user_id', '$session_user_name', '$ques_id', '$answer')";
