@@ -33,123 +33,54 @@
 <body>
 <?php include('loginlogoutmodel.php'); ?>
 
-            <div class="container1">
-            <?php if ($msg <> "") { ?>
-                            <div class="alert alert-dismissable alert-<?php echo $msgType; ?>">
-                            <button data-dismiss="alert" class="close" type="button">x</button>
-                            <p><?php echo $msg; ?></p>
-                        </div>
-                        <?php } 
-                        ?>
-                <div class="logoContainer">
-                    <img class="mainLogo" src="assets/img/dccLogo.png" alt="Dot">
-                    <h1 class="headLogo">CODE COMMUNITY</h1>
-                    <p>Saranathan College of Engineering</p>
-                </div>
-                <ul class="mainMenu">
-                
-                    <li><a href="#" onClick="modalOpen();" class="btn shadow-lg btn-light text-primary" style="font-size:14px;"><i class="fas fa-dollar-sign fa-1x" style="font-size:14px;"></i> Register</a></li>
-                    <li><a href="#"  onClick="modalOpen();" class="btn shadow-lg btn-light text-primary" style="font-size:14px;"><i class="fas fa-dollar-sign fa-1x" style="font-size:14px;"></i> Login</a></li>
-                    <li><button href="#" onclick="about();" class="btn shadow-lg btn-light text-primary" style="font-size:14px;"><i class="fas fa-dollar-sign fa-1x" style="font-size:14px;"></i> About</button></li>
-                </ul>
- 
-                <div class="container1Content">
-
-          
-                    <h1 class="one"> STEP UP YOUR CODING GAME </h1>
-                    <p class="two">
-                        The new way to improve your programming Skills <br>   
-                        while having fun and getting noticed              
-                    </p>
-                    <button class="buttonOne "  onClick="modalOpen();">GET-STARTED</button>
-                    <button class="buttonTwo"  onClick="modalOpen();">LOGIN</button>
-                </div>
-            </div>
-            <div class="container2">
-                <h1 class="containerHeading">We're smarter together</h1>
-                <ul class="containercontent">
-                    <li>
-                        <h2>Belong</h2>
-                        <article>
-                            We're developers just like you.<br>
-                            Join the community and feel at home.
-                        </article>
-                    </li>
-                    <li>
-                        <h2>Get insights</h2>
-                        <article>
-                            Meet like-minded enthusiasts, ask for help and have<br>
-                            your code reviewed. We're here for each other.
-                        </article>
-                    </li>
-                    <li>
-                        <h2>Be inspired</h2>
-                        <article>
-                            Compare solutions and learn tips from the best programmers.
-                        </article>
-                    </li>
-                </ul>
-                <button class="joinButton"  onClick="modalOpen();">JOIN THE COMMUNITY</button> 
-            </div>
-
-            <div class="container3">
-                <div class="block1"> 
-                    <img class="mainLogo" src="assets/img/dccLogo.png" alt="Dot">
-                    <h1 class="headLogo">CODE COMMUNITY</h1>
-                    <p>Saranathan College of Engineering</p>
-                    <blockquote>© 2018 dotCodeCommunity</blockquote>
-                </div>
-                <div class="block3">
-                    <h5>Dot Code Community</h5>
-                    <ul>
-                        <li><a href="https://www.facebook.com/dotcodecommunity/" target="_blank"><i class="fab fa-facebook fa-2x" alt="facebook"></i></a></li>
-                        <li><a href="https://github.com/dotcodecommunity" target="_blank"><i class="fab fa-github fa-2x" alt="Git"></i></a></li>
-                        <li><a href="https://www.instagram.com/dotcodecommunity/" target="_blank"><i class="fab fa-instagram fa-2x" alt="Instagram"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCpz3ZDxmYLnLAbt6ptf5W9Q" target="_blank"><i class="fab fa-youtube fa-2x" alt="Youtube"></i></a></li>
-                    </ul>
-                </div>
-                <div class="block2">
-                    <h5>About</h5>
-                    <ul>
-                        <li><a href="#">About dCC</a></li>
-                        <li><a href="#">Support Us</a></li>
-                        <li><a href="#">Team</a></li>
-                    </ul>
-                </div>
-                <div class="block4">
-                    <h5>Developed by :-</h5>
-                     <p>
-                        Thayalan G R <br>
-                        (C.S.E Dept - SCE)
-                    </p>
-                    <ul>
-                        <li><a href="https://www.facebook.com/thayalan.gr.77" target="_blank"><i class="fab fa-facebook" alt="facebook"></i></a></li>
-                        <li><a href="https://github.com/ThayalanGR" target="_blank"><i class="fab fa-github" alt="Git"></i></a></li>
-                        <li><a href="https://www.instagram.com/thayalangr/" target="_blank"><i class="fab fa-instagram" alt="Instagram"></i></a></li>
-                        <!-- <li><a href="http://" target="_blank"><i class="fab fa-youtube" alt="Youtube"></i></a></li> -->
-                    </ul> 
-                    <p>
-                        Raaja Vignesh <br>
-                        (C.S.E Dept - SCE)
-                    </p>
-                    <p>
-                        Ambarish P K <br>
-                        (C.S.E Dept - SCE)
-                    </p>
-                  
-                    
-
-                </div>
-                <div class="block5">
-                    <blockquote>
-                        Released under the MIT License<br>
-                        Copyright © 2018-2020 ThayalanGR
-                    </blockquote>
-                </div>
-            </div>
+<header class="header-wrapper container">
+        <div class="video-bg">
+            <video src="https://d2ezlykacdqcnj.cloudfront.net/programming-ide/programming-ide.mp4" autoplay="true" loop="true"></video>
         </div>
-   
+                            <?php if ($msg <> "") { ?>
+                                <div class="alert alert-dismissable alert-<?php echo $msgType; ?>">
+                                    <button data-dismiss="alert" class="close" type="button">x</button>
+                                    <p><?php echo $msg; ?></p>
+                                </div>
+                            <?php } ?>
+        <div class="video-overlay"></div>
+        <div class="header-content">
+            <div class="content-header">
 
+                    <h1>D<img class="dot-logo" src="assets/img/dccLogo.png"></img>tCodeCommunity</h1>
+            </div>
+            <div class="content-body">
+                    <p>
+                            We at DCC are a team of passionate Coders, determined to build a technological edifice with the mixture of skills and knowledge. We are geared towards building solutions to problems unsolved and creating opportunities for people who have just started their journey in Coding!
+                    </p>
+            </div>
+            <div class="content-body-button">
+                <a onClick="modalOpen();" class="btn shadow btn-outline-primary pl-5 pr-5 mr-3 text-white"> Register</a>
+                <a onClick="modalOpen();" class="btn shadow btn-outline-success pl-5 pr-5 text-white"> Login</a>
+            </div>
+
+            <div class="content-footer-right">
+                <div class="footer-para-right">
+                    <ul>
+                        <li><a href="https://www.facebook.com/dotcodecommunity/" target="_blank"><i class="fab fa-facebook text-white" alt="facebook"></i></a></li>
+                        <li><a href="https://github.com/dotcodecommunity" target="_blank"><i class="fab fa-github text-white" alt="Git"></i></a></li>
+                        <li><a href="https://www.instagram.com/dotcodecommunity/" target="_blank"><i class="fab fa-instagram text-white" alt="Instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCpz3ZDxmYLnLAbt6ptf5W9Q" target="_blank"><i class="fab fa-youtube text-white" alt="Youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-footer-left">
+                <div class="footer-para-left" center>
+                    Released under the MIT License Copyright © 2018-2020 Team Dcc
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    
+   
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -6,6 +6,17 @@ check_login();
 if(isset($_GET['uid']))
 {
     $uid = $_GET['uid'];
+} 
+
+
+if(isset($_GET['id']))
+{
+$id=$_GET['id'];
+$msg=mysqli_query($con,"delete from credits where credits_id='$id'");
+if($msg)
+{
+echo "<script>alert('Data deleted');</script>";
+}
 }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -56,7 +67,9 @@ if(isset($_GET['uid']))
                                     <td style="font-size:12px;"><?php echo $cnt;?></td> 
                                     <td style="font-size:12px;"><?php echo $row1['credits'];?></t>
                                     <td style="font-size:12px;"><?php echo $row1['reason'];?></td>
-                                    <td style="font-size:12px;"><?php echo $row1['date1'];?></t>
+                                    <td style="font-size:12px;"><?php echo $row1['date1'];?></td>
+                                    <td style="font-size:12px;"><a href="view-history.php?id=<?php echo $row1['credits_id'];?>"> 
+                                     <button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><i class="fa fa-trash-o "></i></button></a></td>
                                     </tr>
                                 <?php $cnt=$cnt+1; }?>
                               </tbody>
