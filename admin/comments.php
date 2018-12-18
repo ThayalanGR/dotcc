@@ -44,11 +44,11 @@ $mail->SMTPAuth = true;                  // enable SMTP authentication
 $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 $mail->Host = gethostbyname('ssl://smtp.gmail.com');      // sets GMAIL as the SMTP server
 $mail->Port = 465;                   // set the SMTP port for the GMAIL server
-$mail->Username = 'grthayalan18@gmail.com';
-$mail->Password = '1018@thayalan';
-$mail->SetFrom('grthayalan18@gmail.com', 'Thaya');
+$mail->Username = 'dotcodecommunity@gmail.com';
+$mail->Password = 'dotcc@123';
+$mail->SetFrom('dotcodecommunity@gmail.com', 'DotCodeCommunity');
 $mail->AddAddress($email);
-$mail->Subject = trim("Email Verifcation - TechnoKryon");
+$mail->Subject = trim("Start-up idea feedback from DotCOdeCOmmunity");
 $mail->MsgHTML($message);
 try {
   $mail->send();
