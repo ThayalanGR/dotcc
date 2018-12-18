@@ -12,14 +12,22 @@ if($num>0)
 $extra="manage-users.php";
 $_SESSION['adminlogin']=$num['name'];
 $_SESSION['adminid']=$num['user_id'];
-echo "<script>window.location.href='".$extra."'</script>";
+// echo "<script>window.location.href='".$extra."'</script>";
+// $extra="index.php";
+$host  = $_SERVER['HTTP_HOST'];
+$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+header("location:http://$host$uri/$extra");
 exit();
 }
 else
 {
 $_SESSION['action1']="*Invalid username or password";
+// $extra="index.php";
+// echo "<script>window.location.href='".$extra."'</script>";
 $extra="index.php";
-echo "<script>window.location.href='".$extra."'</script>";
+$host  = $_SERVER['HTTP_HOST'];
+$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+header("location:http://$host$uri/$extra");
 exit();
 }
 }
