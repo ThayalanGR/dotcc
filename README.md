@@ -1,1 +1,1 @@
-this is master
+College tech community with student skills handling and teaching web platform
